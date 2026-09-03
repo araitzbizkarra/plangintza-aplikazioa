@@ -1,0 +1,1 @@
+# plangintza-aplikazioa
