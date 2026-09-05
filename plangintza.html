@@ -2,7 +2,7 @@
 <html lang="eu">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hezi+ Laguntzailea · V32</title>
+<title>Hezi+ plangintza tresna</title>
 <style>
 :root{--n:#17365d;--b:#2f75b5;--t:#1f7a8c;--bg:#f5f8fb;--ink:#1f2937;--m:#6b7280;--l:#dbe3ea;--ok:#2f855a;--w:#b7791f;--r:#b23a48;--p:#6f56d9}
 *{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}
@@ -27,7 +27,83 @@ label{display:block;color:var(--n);font-size:13px;font-weight:750;margin:12px 0 
 details.ac{background:white;border:1px solid var(--l);border-radius:17px;box-shadow:0 10px 28px #17365d12;overflow:hidden}details.ac summary{list-style:none;cursor:pointer;padding:16px 18px}details.ac summary::-webkit-details-marker{display:none}.inside{border-top:1px solid var(--l);padding:16px 18px;background:#fbfdff}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.tabs button.active{background:var(--n);color:white}.guideSteps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.guideSteps div{border:1px solid var(--l);background:#f8fafb;border-radius:12px;padding:13px}.guideSteps b{color:var(--n)}
 @media(max-width:950px){.app{grid-template-columns:1fr}aside{height:auto;position:relative}.logic{position:static!important;margin-top:14px}.nav{grid-template-columns:repeat(3,1fr)}.g4,.g3,.form4,.form3{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){main{padding:20px 14px}.g4,.g3,.g2,.form2,.form3,.form4,.timeline,.guideSteps{grid-template-columns:1fr}.nav{grid-template-columns:1fr 1fr}.actions{display:grid}.copy{padding-right:13px}.copy button{position:static;margin-top:8px}}@media print{aside,.top .row,.nav,.actions,.tabs,.secondary,.primary,.danger{display:none!important}.app{display:block}main{padding:0}.card,details.ac{box-shadow:none;break-inside:avoid}.view{display:block!important}}
-</style></head>
+</style>
+<style id="v36-year-style">
+:root{
+  --n:#355a73;
+  --b:#6fa8c8;
+  --t:#70b7ad;
+  --bg:#f7fbfc;
+  --ink:#263238;
+  --m:#697783;
+  --l:#dfe8ed;
+  --ok:#2f855a;
+  --w:#b7791f;
+  --r:#b23a48;
+  --p:#8172c6;
+  --paper:#ffffff;
+}
+body{font-family:"Century Gothic","Aptos","Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#fbfdfe,#f4f9fa);color:var(--ink)}
+.app{grid-template-columns:270px 1fr}
+aside{background:linear-gradient(180deg,#ffffff,#edf7f8);color:var(--n);border-right:1px solid var(--l);box-shadow:8px 0 26px rgba(53,90,115,.08)}
+.brand{color:var(--n);letter-spacing:-.02em}.brand small{color:#6c8090;opacity:1}
+#brandSub,.ej,.creditSmall,aside .small{color:#6c8090!important}
+aside .logic{background:#ffffff;border:1px solid var(--l);color:#52616b;box-shadow:0 8px 18px rgba(53,90,115,.06)}
+.officialLogo{background:#fff;border:1px solid var(--l);box-shadow:none}
+.nav button{color:#4f6473;background:transparent}
+.nav button.active,.nav button:hover{background:#dff2f3;color:var(--n)}
+.top h1,.sec h2,.metric strong,.activity h3,.priority h3,label{color:var(--n)}
+.card,details.ac,.box{background:#fff;border:1px solid var(--l);box-shadow:0 10px 28px rgba(53,90,115,.08)}
+.primary{background:linear-gradient(135deg,#6fa8c8,#70b7ad);color:#fff;border:0}
+.secondary{background:#fff;color:var(--n);border:1px solid var(--l)}
+.secondary.active,.tabs button.active,.termBtn.active{background:#dff2f3;color:var(--n);border-color:#b8dadd}
+.pill{background:#edf7f8;color:var(--n)}.teal{background:#e4f4f2;color:#347a72}.purple{background:#f1effb;color:#6558a7}
+.progress span{background:linear-gradient(90deg,#70b7ad,#6fa8c8)}
+.callout{background:#eef8f8;border:1px solid #cde7e8;color:#42616a}
+.step.active{background:#6fa8c8;color:#fff}
+.tbl th{background:#f1f8f9;color:var(--n)}
+.slotCard{background:#fbfdfe;border-left-color:#6fa8c8}
+.slotCard.ind{background:#eaf7f7;border-left-color:#70b7ad}.slotCard.bide{background:#f3f0fb;border-left-color:#8172c6}.slotCard.abe{background:#fff7e8;border-left-color:#d59b36}
+.termTools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.termBtn{border:1px solid var(--l);background:#fff;color:var(--n);border-radius:999px;padding:8px 12px;font-weight:800;font-size:12px}
+.termBlock{margin:18px 0;border:1px solid var(--l);border-radius:16px;overflow:hidden;background:#fff}
+.termBlock h3{margin:0;padding:13px 16px;background:#f1f8f9;color:var(--n)}
+.termBlock .inside{border-top:0}
+.termKpis{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px;margin:0 0 14px}
+.termKpis .miniKpi{background:#fff;border:1px solid var(--l);border-radius:14px;padding:12px}
+.termKpis .miniKpi b{display:block;font-size:20px;color:var(--n)}
+.termKpis .miniKpi span{font-size:12px;color:var(--m)}
+.indicatorGuide,.followGuide{background:#f7fbfc;border:1px solid var(--l);border-left:5px solid var(--t);border-radius:14px;padding:12px;margin:0 0 14px;color:var(--ink)}
+.indicatorGuide b,.followGuide b{color:var(--n)}
+#topTools{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+#topTools label{margin:0}
+@media(max-width:950px){.app{grid-template-columns:1fr}.termKpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.termKpis{grid-template-columns:1fr}}
+</style>
+
+<style id="v40-style">
+/* Hezi+ V4.0 · erabilgarritasun eta export hobekuntzak */
+.g5{grid-template-columns:repeat(5,minmax(120px,1fr))}
+.miniPanel{margin:14px 0 2px;display:grid;grid-template-columns:minmax(240px,1fr) minmax(150px,220px) auto;gap:14px;align-items:center;background:linear-gradient(135deg,#f5fbfb,#f8fbfd);border:1px solid var(--l);border-left:5px solid var(--t);border-radius:15px;padding:14px 16px}
+.panelAcc{border:1px solid var(--l);border-radius:14px;background:#fff;margin:10px 0;overflow:hidden;box-shadow:0 5px 16px rgba(53,90,115,.05)}
+.panelAcc summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;list-style:none;color:var(--n)}
+.panelAcc summary::-webkit-details-marker{display:none}.panelAcc[open] summary{background:#f4fafb;border-bottom:1px solid var(--l)}
+.iconBtn{min-width:34px;padding:7px 10px}
+.goalGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}.goalChoice{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--l);border-radius:13px;padding:12px;background:#fbfdfe;font-weight:600;color:var(--ink)}.goalChoice input{width:auto;margin-top:3px}.goalChoice b{color:var(--n)}
+.officialDataBox{display:grid;gap:10px}.officialDataBox .copy{background:#fbfdfe}.officialDataBox .copy b{display:block;color:var(--n);font-size:12px;margin-bottom:5px}
+.trackTools,.summaryAction{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin:0 0 14px}.summaryAction{justify-content:space-between;align-items:center;background:#f4fafb;border:1px solid var(--l);border-radius:14px;padding:12px 14px}
+.tableWrap{overflow:auto;border:1px solid var(--l);border-radius:14px}.tableWrap .tbl{min-width:820px}.tableWrap .tbl th{position:sticky;top:0;z-index:1}
+.teacherKpis{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:10px;margin-bottom:14px}.teacherKpis>div{background:linear-gradient(145deg,#fff,#f6fbfc);border:1px solid var(--l);border-radius:14px;padding:12px}.teacherKpis b{display:block;color:var(--n);font-size:21px}.teacherKpis span{font-size:12px;color:var(--m)}
+.mutedRow{opacity:.58}.checkGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.checkItem{border:1px solid var(--l);border-radius:13px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;background:#fff}.checkItem.okay{border-left:5px solid var(--ok);background:#f7fcf9}.checkItem.nope{border-left:5px solid var(--w);background:#fffaf0}.checkItem .mark{font-weight:900;font-size:18px;line-height:1}.checkItem b{display:block;color:var(--n)}
+.v40TrackCard{display:grid;gap:10px}.v40TrackCard .trackHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.v40TrackCard .trackGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.v40TrackCard .progressBox{padding:11px;border:1px solid var(--l);border-radius:12px;background:#fbfdfe}.v40TrackCard textarea{min-height:72px}
+.v40OfficialTerm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#f4fafb;border:1px solid var(--l);border-radius:13px;padding:10px 12px;margin-bottom:14px}.v40OfficialTerm select{width:auto;min-width:190px}
+.v40CatalogHero{background:linear-gradient(135deg,#e9f7f5,#eef6fb);border:1px solid #cfe3e7;border-radius:15px;padding:14px 16px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:12px}.v40CatalogHero b{color:var(--n)}
+@media(max-width:1100px){.g5{grid-template-columns:repeat(3,1fr)}.teacherKpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.g5,.goalGrid,.checkGrid,.v40TrackCard .trackGrid,.teacherKpis{grid-template-columns:1fr}.miniPanel{grid-template-columns:1fr}.panelAcc summary,.v40CatalogHero,.summaryAction{align-items:flex-start;flex-direction:column}.v40OfficialTerm select{width:100%}}
+@media print{.trackTools,.summaryAction,.v40CatalogHero,.iconBtn{display:none!important}}
+
+</style>
+</head>
 <body>
 <div class="app">
 <aside>
@@ -431,7 +507,61 @@ render();
     const ce=editable?' contenteditable="true" spellcheck="false"':'';
     return `<div class="catalogHero"><h2 style="margin:0;color:white">Itsasargi DBH · Hezi+ jardueren katalogoa</h2><p style="margin:8px 0 0;color:#eaf2f8">Familiei aurkezteko bertsio editagarria. Testuak zuzenean aldatu daitezke eta ondoren HTML/Word edo PDF moduan gorde.</p></div><div class="catalogGrid">${publicActivities().map(a=>`<div class="catalogCard"><span class="pill ${typeCls(a.measure)}">${E(a.measure)}</span>${a.ecosystem?`<span class="pill teal">${E(a.ecosystem)}</span>`:''}<h3 class="catalogField"${ce}>${E(a.name)}</h3><p class="catalogField"${ce}>${E(a.desc||'')}</p><p class="small"><strong>Noiz:</strong> <span class="catalogField"${ce}>${E(termLabel(a.term))} · ${E(slotName(a.slot)||'ordutegia zehazteke')}${a.slot2?' + '+E(slotName(a.slot2)):''}</span></p><p class="small"><strong>Norentzat:</strong> <span class="catalogField"${ce}>${E(a.level||'DBH')}</span> · <strong>Plazak:</strong> <span class="catalogField"${ce}>${E(a.students||'')}</span></p><p class="small"><strong>Zer lortu nahi dugu:</strong> <span class="catalogField"${ce}>${E(a.change||'')}</span></p><p class="small catalogField"${ce}><strong>Izen-ematea:</strong> Ikastetxeak familiei jakinaraziko die epea eta modua.</p></div>`).join('')}</div>`;
   }
-  window.downloadCatalog=function(type){const html=document.getElementById('summaryContent')?.innerHTML||renderCatalogHTML(false);const full=`<html><head><meta charset="utf-8"><title>Hezi+ familientzako katalogoa</title><style>body{font-family:Arial,sans-serif;color:#17365d;margin:24px}.catalogHero{background:#17365d;color:white;border-radius:18px;padding:22px;margin-bottom:16px}.catalogHero h2{color:white}.catalogGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.catalogCard{border:1px solid #dbe3ea;border-radius:16px;padding:15px;break-inside:avoid}.pill{display:inline-block;border-radius:999px;background:#eaf2f8;padding:5px 8px;font-size:11px;font-weight:bold;margin:2px}.small{font-size:12px;color:#555}@media print{.catalogGrid{grid-template-columns:repeat(2,1fr)}}</style></head><body>${html}
+  window.downloadCatalog=function(type){const html=document.getElementById('summaryContent')?.innerHTML||renderCatalogHTML(false);const full=`<html><head><meta charset="utf-8"><title>Hezi+ plangintza tresna</title><style>body{font-family:Arial,sans-serif;color:#17365d;margin:24px}.catalogHero{background:#17365d;color:white;border-radius:18px;padding:22px;margin-bottom:16px}.catalogHero h2{color:white}.catalogGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.catalogCard{border:1px solid #dbe3ea;border-radius:16px;padding:15px;break-inside:avoid}.pill{display:inline-block;border-radius:999px;background:#eaf2f8;padding:5px 8px;font-size:11px;font-weight:bold;margin:2px}.small{font-size:12px;color:#555}@media print{.catalogGrid{grid-template-columns:repeat(2,1fr)}}</style>
+<style id="v36-year-style">
+:root{
+  --n:#355a73;
+  --b:#6fa8c8;
+  --t:#70b7ad;
+  --bg:#f7fbfc;
+  --ink:#263238;
+  --m:#697783;
+  --l:#dfe8ed;
+  --ok:#2f855a;
+  --w:#b7791f;
+  --r:#b23a48;
+  --p:#8172c6;
+  --paper:#ffffff;
+}
+body{font-family:"Century Gothic","Aptos","Segoe UI",Arial,sans-serif;background:linear-gradient(180deg,#fbfdfe,#f4f9fa);color:var(--ink)}
+.app{grid-template-columns:270px 1fr}
+aside{background:linear-gradient(180deg,#ffffff,#edf7f8);color:var(--n);border-right:1px solid var(--l);box-shadow:8px 0 26px rgba(53,90,115,.08)}
+.brand{color:var(--n);letter-spacing:-.02em}.brand small{color:#6c8090;opacity:1}
+#brandSub,.ej,.creditSmall,aside .small{color:#6c8090!important}
+aside .logic{background:#ffffff;border:1px solid var(--l);color:#52616b;box-shadow:0 8px 18px rgba(53,90,115,.06)}
+.officialLogo{background:#fff;border:1px solid var(--l);box-shadow:none}
+.nav button{color:#4f6473;background:transparent}
+.nav button.active,.nav button:hover{background:#dff2f3;color:var(--n)}
+.top h1,.sec h2,.metric strong,.activity h3,.priority h3,label{color:var(--n)}
+.card,details.ac,.box{background:#fff;border:1px solid var(--l);box-shadow:0 10px 28px rgba(53,90,115,.08)}
+.primary{background:linear-gradient(135deg,#6fa8c8,#70b7ad);color:#fff;border:0}
+.secondary{background:#fff;color:var(--n);border:1px solid var(--l)}
+.secondary.active,.tabs button.active,.termBtn.active{background:#dff2f3;color:var(--n);border-color:#b8dadd}
+.pill{background:#edf7f8;color:var(--n)}.teal{background:#e4f4f2;color:#347a72}.purple{background:#f1effb;color:#6558a7}
+.progress span{background:linear-gradient(90deg,#70b7ad,#6fa8c8)}
+.callout{background:#eef8f8;border:1px solid #cde7e8;color:#42616a}
+.step.active{background:#6fa8c8;color:#fff}
+.tbl th{background:#f1f8f9;color:var(--n)}
+.slotCard{background:#fbfdfe;border-left-color:#6fa8c8}
+.slotCard.ind{background:#eaf7f7;border-left-color:#70b7ad}.slotCard.bide{background:#f3f0fb;border-left-color:#8172c6}.slotCard.abe{background:#fff7e8;border-left-color:#d59b36}
+.termTools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.termBtn{border:1px solid var(--l);background:#fff;color:var(--n);border-radius:999px;padding:8px 12px;font-weight:800;font-size:12px}
+.termBlock{margin:18px 0;border:1px solid var(--l);border-radius:16px;overflow:hidden;background:#fff}
+.termBlock h3{margin:0;padding:13px 16px;background:#f1f8f9;color:var(--n)}
+.termBlock .inside{border-top:0}
+.termKpis{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px;margin:0 0 14px}
+.termKpis .miniKpi{background:#fff;border:1px solid var(--l);border-radius:14px;padding:12px}
+.termKpis .miniKpi b{display:block;font-size:20px;color:var(--n)}
+.termKpis .miniKpi span{font-size:12px;color:var(--m)}
+.indicatorGuide,.followGuide{background:#f7fbfc;border:1px solid var(--l);border-left:5px solid var(--t);border-radius:14px;padding:12px;margin:0 0 14px;color:var(--ink)}
+.indicatorGuide b,.followGuide b{color:var(--n)}
+#topTools{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+#topTools label{margin:0}
+@media(max-width:950px){.app{grid-template-columns:1fr}.termKpis{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.termKpis{grid-template-columns:1fr}}
+</style>
+
+</head><body>${html}
 
 </body></html>`;const blob=new Blob(['\ufeff',full],{type:type==='doc'?'application/msword;charset=utf-8':'text/html;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=type==='doc'?'hezi_plus_familientzako_katalogoa.doc':'hezi_plus_familientzako_katalogoa.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),800)};
   const oldRenderSummary=renderSummary;
@@ -767,4 +897,950 @@ render();
 })();
 </script>
 
+
+<script id="v36-ikasturteko-jarraipena">
+(function(){
+  const LOADS_FINAL=["1/3","1/2","2/3","5/6","1"];
+  const TERM_KEYS=["all","1","2","3"];
+  const TERM_NAMES={all:"Ikasturte osoa","1":"1. hiruhilekoa","2":"2. hiruhilekoa","3":"3. hiruhilekoa"};
+  const WEEKS={ "1":10, "2":10, "3":10, "all":30 };
+  function esc(s){return E(s==null?"":String(s));}
+  function num(v){const n=Number(String(v??"").replace("%","").replace(",","."));return isFinite(n)?n:0;}
+  function pctText(v){let n=num(v); if(n>0 && n<=1)n=n*100; return Math.round(n)+"%";}
+  function filterTerm(a,t){return !t||t==="all"||a.term===t||a.term==="all";}
+  function actsByTerm(t){return (S.activities||[]).filter(a=>filterTerm(a,t));}
+  function termButtons(kind){
+    const val=S[kind]||"all";
+    return `<div class="termTools">${TERM_KEYS.map(k=>`<button class="termBtn ${val===k?"active":""}" onclick="setTermView('${kind}','${k}')">${TERM_NAMES[k]}</button>`).join("")}</div>`;
+  }
+  window.setTermView=function(kind,val){S[kind]=val;saveSoft();render();};
+  function termLabel2(t){return TERM_NAMES[t]||termLabel(t);}
+  function plannedTerm(t,measure){return actsByTerm(t).filter(a=>!measure||a.measure===measure).reduce((x,a)=>x+(+a.hours||0),0);}
+  function avgAttendance(acts){
+    const vals=acts.map(a=>num(a.att)).filter(v=>v>0);
+    return vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0;
+  }
+  function avgExecution(acts){
+    const vals=acts.map(a=>{
+      if(a.followup && num(a.followup.executionPct)>0) return num(a.followup.executionPct);
+      const planned=(+a.plannedSessions||Math.max(1,Math.round((+a.hours||1)*(WEEKS[a.term||"1"]||10))));
+      return planned?((+a.done||0)/planned*100):0;
+    }).filter(v=>v>0);
+    return vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0;
+  }
+  function termKpis(t){
+    const acts=actsByTerm(t);
+    return `<div class="termKpis">
+      <div class="miniKpi"><b>${acts.length}</b><span>Jarduera</span></div>
+      <div class="miniKpi"><b>${plannedTerm(t)} h</b><span>Ordu/aste</span></div>
+      <div class="miniKpi"><b>${avgExecution(acts)}%</b><span>Gauzatzea</span></div>
+      <div class="miniKpi"><b>${avgAttendance(acts)}%</b><span>Asistentzia</span></div>
+    </div>`;
+  }
+
+  // Brand and Basque-only clean wording.
+  TR.eu.brandSmall="plangintza tresna";
+  TR.eu.brandSub="Plangintza, jarraipena eta memoria";
+  TR.eu.logic="<strong>Lan-fluxua</strong><br>BEHARRA → JARDUERA → ADIERAZLEA → JARRAIPENA<br><hr style=\"border:0;border-top:1px solid #dbe3ea;margin:10px 0\"><small>HeziLabek egina Hezi+ proiekturako<br>CC BY-NC-SA 4.0</small>";
+  TR.eu.title.center=["Hezi+ plangintza tresna","Ikasturte osoko plangintza eta jarraipena."];
+  TR.eu.title.schedule=["Ordutegia","Hiruhilekoka edo ikasturte osoan ikus daiteke."];
+  TR.eu.title.track=["Jarraipena","Excel bidez jasotako gauzatzea eta asistentzia."];
+  TR.eu.title.summary=["Laburpena","Hiruhilekoka bereizitako ikuspegia."];
+  TR.eu.tabs={official:"Aplikazio ofizialerako datuak",activities:"Jardueren laburpena",teachers:"Irakasleak",checklist:"Kontrol-zerrenda",followup:"Jarraipena"};
+  if(TR.eu.nav.home) delete TR.eu.nav.home;
+  S.lang="eu";
+  if(!S.view || S.view==="home") S.view="center";
+  S.scheduleTerm=S.scheduleTerm||"all";
+  S.summaryTerm=S.summaryTerm||"all";
+  S.trackTerm=S.trackTerm||"all";
+  S.followup=S.followup||{};
+
+  function addTopTools(){
+    const top=document.querySelector(".top .row");
+    if(!top || document.getElementById("topTools")) return;
+    top.insertAdjacentHTML("afterbegin",`
+      <div id="topTools">
+        <button class="secondary" onclick="downloadFollowupWorkbook()">Jarraipen Excel eredua</button>
+        <label class="secondary">Jarraipen Excel kargatu<input id="followFile" type="file" accept=".xlsx,.xls,.csv,.txt" style="display:none"></label>
+      </div>`);
+    document.getElementById("followFile").addEventListener("change",function(e){
+      const f=e.target.files && e.target.files[0]; if(f) importFollowupWorkbook(f);
+      e.target.value="";
+    });
+  }
+
+  // Teacher load dropdown.
+  function loadOptions(v){
+    return LOADS_FINAL.map(x=>`<option value="${x}" ${String(v||"1")===x?"selected":""}>${x}</option>`).join("");
+  }
+  function beautifyTeacherLoads(){
+    document.querySelectorAll("#teachers tbody tr").forEach((tr,i)=>{
+      const cell=tr.children && tr.children[3];
+      if(cell) cell.innerHTML=`<select onchange="teach(${i},'load',this.value)">${loadOptions(S.teachers[i]?.load||"1")}</select>`;
+    });
+  }
+  const _renderCenter36=renderCenter;
+  renderCenter=function(){_renderCenter36(); beautifyTeacherLoads();};
+  window.renderCenter=renderCenter;
+
+  // Short and measurable achievement indicators.
+  function tx(a){return String([(a&&a.name)||"", (a&&a.measure)||"", (a&&a.ecosystem)||"", (a&&a.need)||"", (a&&a.change)||"", (a&&a.desc)||""].join(" ")).toLowerCase();}
+  function inferShortGoals(a){
+    const t=tx(a);
+    if(t.includes("euskara")) return [6,3,2];
+    if(/irakur|testu|informazio|komunikazio|irratia|podcast/.test(t)) return [0,2,7];
+    if(/matemat|steam|datu|grafiko|laborategi|velutina|prototipo/.test(t)) return [0,1,7];
+    if(/famil|komunitate|parte|udal|kultura|auzo/.test(t)) return [3,2,6];
+    if(/bizikidetza|lagun|ongizate|zaintza|harrera/.test(t)) return [4,3,7];
+    return [2,3,0];
+  }
+  function mainAction(a){
+    const t=tx(a);
+    if(t.includes("euskara")) return "euskarazko ahozko jardun egokia egiten du";
+    if(/irakur|testu|informazio|irratia|podcast/.test(t)) return "informazio nagusia identifikatu eta azaltzen du";
+    if(/matemat|problema/.test(t)) return "problema baten estrategia arrazoitzen du";
+    if(/datu|grafiko|velutina/.test(t)) return "datuetatik ondorio egokia ateratzen du";
+    if(/steam|prototipo|laborategi/.test(t)) return "prototipo edo proba bat justifikatzen du";
+    if(/famil|katalogo/.test(t)) return "familiei zuzendutako mezua argi azaltzen du";
+    if(/udal|komunitate|auzo|kultura/.test(t)) return "komunitaterako proposamen bat egiten du";
+    if(/bizikidetza|ongizate|zaintza|harrera|lagun/.test(t)) return "talde-lanerako edo zaintzarako estrategia bat erabiltzen du";
+    if(/autonomia|agenda|ikasteko ohitura/.test(t)) return "ikasteko estrategia bat erabiltzen du";
+    return "hautatutako helburuan aurrerapena erakusten du";
+  }
+  function product(a){
+    const t=tx(a);
+    if(/irratia|podcast/.test(t)) return "gidoia edo grabazioa";
+    if(/irakur|testu|informazio/.test(t)) return "ulermen-fitxa";
+    if(t.includes("euskara")) return "ahozko ekoizpena";
+    if(/matemat|problema/.test(t)) return "ebazpen-fitxa";
+    if(/velutina|datu|grafiko/.test(t)) return "datu-fitxa";
+    if(/steam|prototipo|laborategi/.test(t)) return "prototipo-fitxa";
+    if(/famil|katalogo/.test(t)) return "familientzako testua";
+    if(/udal|komunitate|auzo|kultura/.test(t)) return "proposamen laburra";
+    if(/bizikidetza|harrera|lagun|ongizate/.test(t)) return "autoebaluazio-fitxa";
+    return "azken ekoizpena";
+  }function transfer(a){
+    const t=tx(a);
+    if(t.includes("euskara")) return "beste ahozko egoera batean";
+    if(/irakur|testu|informazio|irratia|podcast/.test(t)) return "beste testu/komunikazio-egoera batean";
+    if(/matemat|datu|steam|laborategi|prototipo|velutina/.test(t)) return "erronka berri batean";
+    if(/famil|komunitate|udal|auzo|kultura/.test(t)) return "komunitateari aurkeztean";
+    if(/bizikidetza|ongizate|zaintza|harrera|lagun/.test(t)) return "eguneroko harremanetan";
+    return "beste ikaskuntza-egoera batean";
+  }
+  function makeShortIndicators(a){
+    if(!a.objectives || !a.objectives.length) a.objectives=inferShortGoals(a);
+    a.objectives=a.objectives.slice(0,3);
+    while(a.objectives.length<3){
+      const base=inferShortGoals(a), c=base[a.objectives.length] ?? a.objectives.length;
+      a.objectives.push(a.objectives.includes(c)?(c+1)%goals().length:c);
+    }
+    const level=a.level||"DBH";
+    a.ach=[
+      "%75ek "+mainAction(a)+" ("+level+"; errubrika 3/4).",
+      "%70ek "+product(a)+" osatzen du (3 irizpide beteta).",
+      "%80k ikasitakoa "+transfer(a)+" aplikatzen du (behaketa/autoebaluazioa)."
+    ];
+    if(a.follow) delete a.follow;
+    return a;
+  }
+  buildThreeIndicators=function(a){return makeShortIndicators(a);};
+  window.buildThreeIndicators=buildThreeIndicators;
+  suggestIndicators=function(){try{cap();}catch(e){} makeShortIndicators(D); drawW();};
+  window.suggestIndicators=suggestIndicators;
+  const _newAct36=newAct;
+  newAct=function(){_newAct36(); const a=S.activities[S.activities.length-1]; if(a) makeShortIndicators(a); render();};
+  window.newAct=newAct;
+
+  function indicatorGuide(){
+    if(!document.getElementById("indicatorGuide") && document.getElementById("agrid")){
+      document.getElementById("agrid").insertAdjacentHTML("beforebegin",'<div id="indicatorGuide" class="indicatorGuide"><b>Lorpen-adierazleak:</b> % + lorpena + nola neurtu. Laburrak, neurgarriak eta ikastetxean erabiltzeko modukoak.</div>');
+    }
+  }
+  const _renderActs36=renderActs;
+  renderActs=function(){_renderActs36(); indicatorGuide();};
+  window.renderActs=renderActs;
+
+  // Schedule: term filter and time-band grouping.
+  function dayList(){return ['Astelehena','Asteartea','Asteazkena','Osteguna','Ostirala'];}
+  function timeRanges(){
+    const map=new Map();
+    (S.slots||[]).forEach(s=>{const k=(s.start||'')+'|'+(s.end||''); if(!map.has(k)) map.set(k,{start:s.start,end:s.end});});
+    return [...map.values()].sort((a,b)=>(a.start||'').localeCompare(b.start||'') || (a.end||'').localeCompare(b.end||''));
+  }
+  function actsForDayTime(day,start,end,t){
+    const ids=(S.slots||[]).filter(s=>s.day===day&&s.start===start&&s.end===end).map(s=>s.id);
+    return actsByTerm(t).filter(a=>ids.includes(a.slot)||ids.includes(a.slot2));
+  }
+  renderSchedule=function(){
+    const t=S.scheduleTerm||"all";
+    scheduleH2.textContent="Ordutegia";
+    scheduleP.textContent="Hiruhilekoka edo ikasturte osoan.";
+    printBtn.textContent="Inprimatu";
+    const ranges=timeRanges(), days=dayList();
+    const rows=ranges.map(r=>`<tr><th>${esc(r.start)}-${esc(r.end)}</th>${days.map(d=>{
+      const acts=actsForDayTime(d,r.start,r.end,t);
+      return `<td>${acts.map(a=>`<div class="slotCard ${typeCls(a.measure)}" onclick="openInfo('${a.id}')"><b>${esc(a.name)}</b><br>${esc(a.teacher||"")}<br>${esc(a.measure)} · ${esc(termLabel(a.term))}${a.ecosystem?`<br><span class="pill teal">${esc(a.ecosystem)}</span>`:""}</div>`).join("")||"—"}</td>`;
+    }).join("")}</tr>`).join("");
+    scheduleGrid.innerHTML=termButtons("scheduleTerm")+termKpis(t)+`<table class="tbl"><thead><tr><th>Ordu-tartea</th>${days.map(d=>`<th>${d}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
+  };
+  window.renderSchedule=renderSchedule;
+
+  // Follow-up view and import/export.
+  renderTrack=function(){
+    const t=S.trackTerm||"all", acts=actsByTerm(t);
+    trackH2.textContent="Jarraipena";
+    trackP.textContent="Hiruhilekoaren gauzatzea eta asistentzia.";
+    const cards=acts.map(a=>{
+      const f=a.followup||{};
+      const planned=+f.plannedSessions||+a.plannedSessions||Math.max(1,Math.round((+a.hours||1)*(WEEKS[a.term||"1"]||10)));
+      const done=+f.doneSessions||+a.done||0;
+      const ex=+f.executionPct||Math.round(done/planned*100)||0;
+      const att=+f.attendancePct||+a.att||0;
+      return `<details class="ac activity ${typeCls(a.measure)}"><summary><div class="row between"><div><span class="small">${esc(a.measure)} · ${esc(termLabel(a.term))}</span><h3>${esc(a.name)}</h3></div><span class="pill ${att>=70&&ex>=70?'ok':(att>0||ex>0?'warn':'')}">${ex}% · ${att}%</span></div><div class="progress"><span style="width:${Math.min(100,ex)}%"></span></div></summary><div class="inside"><div class="form3"><div><label>Egindako saioak</label><input type="number" value="${done}" onchange="q('${a.id}','done',this.value)"></div><div><label>Asistentzia (%)</label><input type="number" value="${att}" onchange="q('${a.id}','att',this.value)"></div><div><label>Aurreikusitako saioak</label><input type="number" value="${planned}" onchange="let a=S.activities.find(x=>x.id==='${a.id}');if(a){a.plannedSessions=+this.value||0;render()}"></div></div><p class="small"><b>Oharrak:</b> ${esc(f.notes||"—")}</p><p class="small"><b>Adierazleak:</b> ${esc((a.ach||[]).join(" · "))}</p></div></details>`;
+    }).join("") || `<div class="card">Ez dago jarduerarik ikuspegi honetan.</div>`;
+    tgrid.innerHTML=termButtons("trackTerm")+termKpis(t)+`<div class="followGuide"><b>Excel bidez:</b> deskargatu eredua, bete saioak eta asistentzia, eta kargatu berriro hemen.</div><div class="grid g2">${cards}</div>`;
+  };
+  window.renderTrack=renderTrack;
+
+  function xmlEscape(s){return String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  function safeSheet(n){return xmlEscape(String(n).slice(0,28));}
+  function cell(v,type="String",formula=""){
+    const f=formula?` ss:Formula="${xmlEscape(formula)}"`:"";
+    const dataType=type||"String";
+    return `<Cell${f}><Data ss:Type="${dataType}">${xmlEscape(v)}</Data></Cell>`;
+  }
+  function row(vals){return "<Row>"+vals.map(v=>Array.isArray(v)?cell(v[0],v[1],v[2]):cell(v)).join("")+"</Row>";}
+  window.downloadFollowupWorkbook=function(){
+    const activities=(S.activities||[]);
+    const saioHeaders=["ID","Jarduera","Neurria","Hiruhilekoa","Saio zk.","Data","Gauzatuta","Matrikulatuak","Bertaratuak","Asistentzia %","Oharrak"];
+    const labHeaders=["ID","Jarduera","Neurria","Hiruhilekoa","Arduraduna","Aurreikusitako saioak","Egindako saioak","Gauzatzea %","Matrikulatuak","Bertaratzeak guztira","Asistentzia %","Oharrak"];
+    let saioRows=[saioHeaders], labRows=[labHeaders];
+    let rnum=2;
+    activities.forEach((a,ai)=>{
+      const term=a.term||"1";
+      const sess=Math.max(1,Math.round((+a.hours||1)*(WEEKS[term]||10)));
+      labRows.push([a.id,a.name,a.measure,termLabel(a.term),a.teacher,sess,["", "Number", `=COUNTIFS(Saioak!R2C1:R1000C1,RC1,Saioak!R2C7:R1000C7,"Bai")`],["","Number",`=IF(RC[-2]=0,0,RC[-1]/RC[-2])`],a.students||0,["","Number",`=SUMIFS(Saioak!R2C9:R1000C9,Saioak!R2C1:R1000C1,RC1,Saioak!R2C7:R1000C7,"Bai")`],["","Number",`=IF(RC[-2]*RC[-4]=0,0,RC[-1]/(RC[-2]*RC[-4]))`],""]);
+      for(let s=1;s<=sess;s++){
+        saioRows.push([a.id,a.name,a.measure,termLabel(a.term),s,"","",a.students||0,"",["","Number",`=IF(RC[-2]=0,0,RC[-1]/RC[-2])`],""]);
+        rnum++;
+      }
+    });
+    const jardRows=[["ID","Jarduera","Neurria","Hiruhilekoa","Arduraduna","Orduak/aste","Maila","Ikasleak","Ekosistema"],...activities.map(a=>[a.id,a.name,a.measure,termLabel(a.term),a.teacher,a.hours,a.level,a.students,a.ecosystem||""])];
+    const infoRows=[["Hezi+ jarraipen Excel eredua"],["Saioak orrian: Data, Gauzatuta, Matrikulatuak eta Bertaratuak bete."],["Gauzatuta zutabea: Bai / Ez / Atzeratua."],["Laburpena orriko ehunekoak automatikoki kalkulatzen dira."],["Ondoren fitxategia aplikazioan kargatu: Jarraipen Excel kargatu."]];
+    const sheets=[["Argibideak",infoRows],["Jarduerak",jardRows],["Saioak",saioRows],["Laburpena",labRows]];
+    let xml='<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">';
+    sheets.forEach(sh=>{xml+=`<Worksheet ss:Name="${safeSheet(sh[0])}"><Table>`+sh[1].map(row).join("")+"</Table></Worksheet>";});
+    xml+="</Workbook>";
+    download("hezi_plus_jarraipena.xls",xml,"application/vnd.ms-excel;charset=utf-8");
+  };
+
+  function loadXlsx(cb){
+    if(window.XLSX) return cb();
+    const s=document.createElement("script");
+    s.src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js";
+    s.onload=cb;
+    s.onerror=function(){alert("Excel kargatzeko liburutegia ezin izan da ireki. Probatu CSV moduan gordeta.");};
+    document.head.appendChild(s);
+  }
+  function parseCSV(text){
+    const lines=text.split(/\r?\n/).filter(x=>x.trim());
+    const parseLine=l=>{let out=[],cur="",q=false;for(let i=0;i<l.length;i++){const c=l[i];if(c==='"'&&l[i+1]==='"'){cur+='"';i++;}else if(c==='"'){q=!q;}else if((c===","||c===";")&&!q){out.push(cur);cur="";}else cur+=c;}out.push(cur);return out;};
+    const head=parseLine(lines.shift()).map(x=>x.trim());
+    return lines.map(l=>{const vals=parseLine(l),o={};head.forEach((h,i)=>o[h]=vals[i]??"");return o;});
+  }
+  function valOf(row,names){for(const n of names){if(row[n]!=null && row[n]!=="") return row[n];}return "";}
+  function applySessionRows(rows){
+    const acc={};
+    rows.forEach(r=>{
+      const id=String(valOf(r,["ID","Id","id","Jarduera ID"])).trim();
+      const name=String(valOf(r,["Jarduera","Jardueraren izena","Izena"])).trim();
+      if(!id && !name) return;
+      const key=id||name;
+      if(!acc[key]) acc[key]={id,name,planned:0,done:0,enrolledSum:0,attSum:0,attBase:0,notes:[]};
+      const a=acc[key]; a.planned++;
+      const status=String(valOf(r,["Gauzatuta","Eginda","Egoera"])).toLowerCase();
+      const enrolled=num(valOf(r,["Matrikulatuak","Ikasleak"]));
+      const att=num(valOf(r,["Bertaratuak","Asistentzia kopurua"]));
+      if(status==="bai"||status==="✓"||status==="x"||status==="eginda"){a.done++; a.attSum+=att; a.attBase+=enrolled;}
+      const notes=String(valOf(r,["Oharrak","Oharra"])).trim(); if(notes) a.notes.push(notes);
+    });
+    return Object.values(acc).map(a=>({ID:a.id,Jarduera:a.name,"Aurreikusitako saioak":a.planned,"Egindako saioak":a.done,"Gauzatzea %":a.planned?Math.round(a.done/a.planned*100):0,"Asistentzia %":a.attBase?Math.round(a.attSum/a.attBase*100):0,Oharrak:a.notes.slice(0,3).join(" | ")}));
+  }
+  function applyFollowRows(rows){
+    let matched=0;
+    rows.forEach(r=>{
+      const id=String(valOf(r,["ID","Id","id","Jarduera ID"])).trim();
+      const name=String(valOf(r,["Jarduera","Jardueraren izena","Izena"])).trim();
+      const a=(S.activities||[]).find(x=>String(x.id)===id) || (S.activities||[]).find(x=>String(x.name).trim()===name);
+      if(!a) return;
+      const planned=num(valOf(r,["Aurreikusitako saioak","Planifikatutako saioak"]));
+      const done=num(valOf(r,["Egindako saioak","Saio eginak"]));
+      let exec=num(valOf(r,["Gauzatzea %","Gauzatze %","Egite %"]));
+      let att=num(valOf(r,["Asistentzia %","Batez besteko asistentzia","Asistentzia"]));
+      if(exec>0 && exec<=1)exec*=100; if(att>0 && att<=1)att*=100;
+      const notes=String(valOf(r,["Oharrak","Oharra","Jarraipen oharrak"])).trim();
+      a.plannedSessions=planned||a.plannedSessions||0;
+      a.done=done||a.done||0;
+      a.att=Math.round(att||a.att||0);
+      a.followup={plannedSessions:planned||0,doneSessions:done||0,executionPct:Math.round(exec||0),attendancePct:Math.round(att||0),notes};
+      matched++;
+    });
+    saveSoft();render();alert(matched+" jardueraren jarraipena eguneratu da.");
+  }
+  window.importFollowupWorkbook=function(file){
+    const ext=(file.name||"").split(".").pop().toLowerCase();
+    if(ext==="csv"||ext==="txt"){
+      const r=new FileReader();r.onload=()=>applyFollowRows(parseCSV(String(r.result||"")));r.readAsText(file,"utf-8");return;
+    }
+    loadXlsx(function(){
+      const r=new FileReader();
+      r.onload=function(){
+        try{
+          const wb=XLSX.read(new Uint8Array(r.result),{type:"array"});
+          let rows=[];
+          if(wb.Sheets["Saioak"]){rows=applySessionRows(XLSX.utils.sheet_to_json(wb.Sheets["Saioak"],{defval:""}));}
+          else {
+            const sh=wb.Sheets["Laburpena"]||wb.Sheets[wb.SheetNames[0]];
+            rows=XLSX.utils.sheet_to_json(sh,{defval:""});
+          }
+          applyFollowRows(rows);
+        }catch(e){console.error(e);alert("Ezin izan da jarraipen fitxategia irakurri.");}
+      };
+      r.readAsArrayBuffer(file);
+    });
+  };
+
+  // Checklist and official copy cleaned.
+  checklist=function(){
+    const hob=S.activities.filter(a=>a.measure==="He-Hobetuz"), ecos=[...new Set(hob.map(a=>a.ecosystem).filter(Boolean))];
+    const ind=S.activities.filter(a=>a.measure==="He-Indartuz").reduce((x,a)=>x+(+a.hours||0),0);
+    const hobH=S.activities.filter(a=>a.measure==="He-Hobetuz").reduce((x,a)=>x+(+a.hours||0),0);
+    const part=S.activities.reduce((x,a)=>x+(+a.students||0),0);
+    return [
+      {t:"Ikastetxearen datuak osatuta",ok:S.center.name&&centerTotal()>0},
+      {t:"Neurriak aukeratuta",ok:activeMeasures().length>=3},
+      {t:"Beharrak/lehentasunak definituta",ok:S.priorities.length>0},
+      {t:"Jarduerak sortuta",ok:S.activities.length>0},
+      {t:`He-Indartuz orduak planifikatuta (${ind}/${S.center.indHours} h)`,ok:ind>=+S.center.indHours},
+      {t:`He-Hobetuz orduak planifikatuta (${hobH}/${S.center.hobHours} h)`,ok:hobH>=+S.center.hobHours},
+      {t:"Jarduera guztiek 3 lorpen-adierazle dituzte",ok:S.activities.every(a=>(a.ach||[]).filter(Boolean).length===3)},
+      {t:"He-Hobetuz jarduera guztiek ekosistema dute",ok:hob.every(a=>!!a.ecosystem)},
+      {t:`He-Hobetuz: gutxienez 3 ekosistema (${ecos.length}/3)`,ok:ecos.length>=3},
+      {t:`Parte-hartzea %50erantz (${Math.min(part,centerTotal())}/${Math.ceil(centerTotal()/2)})`,ok:part>=Math.ceil(centerTotal()/2)}
+    ];
+  };
+  window.checklist=checklist;
+
+  officialText=function(a){
+    let p=S.priorities.find(x=>x.id===a.priority);
+    return {
+      "Jardueraren izena":a.name||"",
+      "Deskribapen laburra":a.desc||"",
+      "Arduraduna":a.teacher||"",
+      "Planifikatutako orduak":String(a.hours||""),
+      "Neurria":a.measure||"",
+      "Azpitipologia":a.sub||"",
+      "Hiruhilekoa":termLabel(a.term),
+      "Ekosistema":a.ecosystem||"",
+      "Helburuekiko lotura":(typeof objText==="function") ? objText(a.objectives||[]) : (a.objectives||[]).map(i=>goals()[i]).join("\\n"),
+      "Hobekuntza-ekintzekiko lotura":"Lehentasuna: "+(p?.title||"")+"\nBeharra: "+(a.need||"")+"\nEspero den aldaketa: "+(a.change||""),
+      "Ikasle hartzaileak":(a.level||"")+" · "+(a.students||0)+" ikasle",
+      "Saioen antolaketa":(a.hours||0)+" h/aste · "+slotName(a.slot)+(a.slot2?" · "+slotName(a.slot2):""),
+      "Lorpen-adierazleak":(a.ach||[]).slice(0,3).join("\n")
+    };
+  };
+  window.officialText=officialText;
+
+  renderSummary=function(){
+    summaryH2.textContent="Laburpena";
+    summaryP.textContent="Aukeratu ikuspegia eta hiruhilekoa.";
+    let tabs=TR.eu.tabs;
+    summaryTabs.innerHTML=Object.entries(tabs).map(([k,v])=>`<button class="secondary ${S.summaryMode===k?"active":""}" onclick="S.summaryMode='${k}';saveSoft();renderSummary()">${v}</button>`).join("")+`<button class="secondary" onclick="window.print()">Inprimatu</button>`;
+    const t=S.summaryTerm||"all", acts=actsByTerm(t);
+    let html=termButtons("summaryTerm")+termKpis(t);
+    if(S.summaryMode==="official"){
+      html+=acts.map((a,i)=>`<details class="ac" ${i===0?"open":""}><summary><b>${esc(a.name)}</b> <span class="pill">${esc(a.measure)}</span> <span class="pill">${esc(termLabel(a.term))}</span></summary><div class="inside">${Object.entries(officialText(a)).map(([k,v],j)=>`<label>${esc(k)}</label><div class="copy" id="cp_${a.id}_${j}">${esc(v)}<button class="secondary" onclick="copyText('cp_${a.id}_${j}')">Kopiatu</button></div>`).join("")}</div></details>`).join("");
+    }else if(S.summaryMode==="activities"){
+      const terms=t==="all"?["1","2","3"]: [t];
+      html+=terms.map(tt=>{
+        const aa=actsByTerm(tt);
+        return `<div class="termBlock"><h3>${TERM_NAMES[tt]}</h3><div class="inside"><table class="tbl"><thead><tr><th>Jarduera</th><th>Neurria</th><th>Orduak</th><th>Arduraduna</th><th>Ekosistema</th><th>Ikasleak</th></tr></thead><tbody>${aa.map(a=>`<tr><td>${esc(a.name)}</td><td>${esc(a.measure)}</td><td>${a.hours}</td><td>${esc(a.teacher)}</td><td>${esc(a.ecosystem||"")}</td><td>${a.students}</td></tr>`).join("")}</tbody></table></div></div>`;
+      }).join("");
+    }else if(S.summaryMode==="teachers"){
+      let map={};S.teachers.forEach(t=>map[t.name]={...t,h:0,acts:[]});
+      acts.forEach(a=>{if(!map[a.teacher])map[a.teacher]={name:a.teacher,subject:"",dept:"",load:"",h:0,acts:[]};map[a.teacher].h+=(+a.hours||0);map[a.teacher].acts.push(a.name)});
+      html+=`<table class="tbl"><thead><tr><th>Irakaslea</th><th>Ikasgaia</th><th>Mintegia</th><th>Lanaldia</th><th>Orduak/aste</th><th>Jarduerak</th></tr></thead><tbody>${Object.values(map).map(x=>`<tr><td>${esc(x.name)}</td><td>${esc(x.subject)}</td><td>${esc(x.dept)}</td><td>${esc(x.load)}</td><td>${x.h}</td><td>${esc(x.acts.join(" · "))}</td></tr>`).join("")}</tbody></table>`;
+    }else if(S.summaryMode==="followup"){
+      const terms=t==="all"?["1","2","3"]: [t];
+      html+=terms.map(tt=>{
+        const aa=actsByTerm(tt);
+        return `<div class="termBlock"><h3>${TERM_NAMES[tt]}</h3><div class="inside"><table class="tbl"><thead><tr><th>Jarduera</th><th>Gauzatzea</th><th>Asistentzia</th><th>Oharrak</th></tr></thead><tbody>${aa.map(a=>{const f=a.followup||{};return `<tr><td>${esc(a.name)}</td><td>${pctText(f.executionPct||0)}</td><td>${pctText(f.attendancePct||a.att||0)}</td><td>${esc(f.notes||"")}</td></tr>`}).join("")}</tbody></table></div></div>`;
+      }).join("");
+    }else{
+      html+=`<table class="tbl"><thead><tr><th>Egiaztapena</th><th>Egoera</th></tr></thead><tbody>${checklist().map(x=>`<tr><td>${esc(x.t)}</td><td><span class="pill ${x.ok?"ok":"bad"}">${x.ok?"✓":"!"}</span></td></tr>`).join("")}</tbody></table>`;
+    }
+    summaryContent.innerHTML=html;
+  };
+  window.renderSummary=renderSummary;
+
+  // Keep yearly version coherent on first load.
+  (S.teachers||[]).forEach(t=>{if(!LOADS_FINAL.includes(t.load))t.load="1";});
+  (S.activities||[]).forEach(a=>{if(!a.ach || a.ach.length!==3 || a.ach.join(" ").length>320) makeShortIndicators(a); if(a.follow) delete a.follow;});
+  S._ikasturtekoBertsioa=true;
+
+  const _render36=render;
+  render=function(){
+    S.lang="eu";
+    if(!S.view || S.view==="home")S.view="center";
+    _render36();
+    addTopTools();
+    if(document.getElementById("ttl") && S.view==="center"){ttl.textContent="Hezi+ plangintza tresna";sub.textContent="Ikasturte osoko plangintza eta jarraipena.";}
+    const local=document.getElementById("localPill"); if(local)local.textContent="Tresna lokala";
+    const bs=document.getElementById("brandSmall"); if(bs)bs.textContent="plangintza tresna";
+  };
+  window.render=render;
+
+  saveSoft();
+  render();
+})();
+</script>
+
+
+<script id="v40-patch">
+(function(){
+  const V40_VERSION='4.0';
+  const V40_WEEKS={1:10,2:10,3:10};
+  const V40_LOADS=['1/3','1/2','2/3','5/6','1'];
+  const V40_TIMES=[];
+  for(let h=12;h<=20;h++) for(const m of [0,15,30,45]){ if(h===20&&m>0) continue; V40_TIMES.push(String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')); }
+  const v40esc=s=>E(s==null?'':String(s));
+  const v40num=v=>{const n=Number(String(v??'').replace(',','.'));return Number.isFinite(n)?n:0;};
+  const v40Goals=()=>{try{return objs();}catch(e){return []}};
+  const v40ActiveInTerm=(a,t)=>a.term==='all'||String(a.term)===String(t);
+  const v40TermHours=(a,t)=>{
+    if(a.termHours && a.termHours[t]!=null) return v40num(a.termHours[t]);
+    if(v40ActiveInTerm(a,t)) return v40num(a.hours)*V40_WEEKS[t];
+    return 0;
+  };
+  const v40AnnualHours=a=>[1,2,3].reduce((s,t)=>s+v40TermHours(a,t),0);
+  const v40MeasureWeekly=(measure,t)=> (S.activities||[]).filter(a=>a.measure===measure&&v40ActiveInTerm(a,t)).reduce((s,a)=>s+v40num(a.hours),0);
+  const v40ActivitiesTerm=t=>(S.activities||[]).filter(a=>t==='all'||v40ActiveInTerm(a,t));
+  const v40UniqueDays=()=>new Set((S.slots||[]).map(s=>s.day).filter(Boolean)).size;
+  const v40SlotHours=()=> (S.slots||[]).reduce((sum,s)=>{
+    const toMin=x=>{const p=String(x||'').split(':').map(Number);return (p[0]||0)*60+(p[1]||0)};
+    return sum+Math.max(0,(toMin(s.end)-toMin(s.start))/60);
+  },0);
+
+  function v40EnsureActivity(a){
+    a.groups=Array.isArray(a.groups)?a.groups.slice(0,4):[0,0,0,0];
+    while(a.groups.length<4)a.groups.push(0);
+    if(!a.termHours) a.termHours={};
+    [1,2,3].forEach(t=>{
+      if(a.termHours[t]==null) a.termHours[t]=v40ActiveInTerm(a,t)?Math.round(v40num(a.hours)*V40_WEEKS[t]*100)/100:0;
+    });
+    if(!Array.isArray(a.objectives))a.objectives=[];
+    return a;
+  }
+  function v40Migrate(){
+    S.lang='eu';
+    S.center=S.center||{};
+    (S.activities||[]).forEach(v40EnsureActivity);
+    const itsasargi=String(S.center.code||'').includes('ITS')||/Itsasargi/i.test(String(S.center.name||''));
+    if(S.center.participants==null) S.center.participants=itsasargi?300:0;
+    else S.center.participants=v40num(S.center.participants);
+    if(itsasargi && !S._v40ItsasargiUrteOsoa2){
+      S.center.indHours=v40num(S.center.indHours)||8;
+      S.center.hobHours=v40num(S.center.hobHours)||20;
+      S.center.participants=Math.max(v40num(S.center.participants),300);
+
+      // Itsasargi: urte osoko eredu osoa. Derrigorrezko orduak hiru hiruhilekoetan betetzen dira.
+      const ind=(S.activities||[]).filter(a=>a.measure==='He-Indartuz');
+      ind.forEach((a,i)=>{
+        a.term='all'; a.hours=2; a.teacher=`Irakasle ${i+1}`;
+        a.termHours={1:20,2:20,3:20};
+        v40EnsureActivity(a);
+      });
+      const hob=(S.activities||[]).filter(a=>a.measure==='He-Hobetuz');
+      hob.forEach((a,i)=>{
+        a.term='all'; a.hours=1; a.teacher=`Irakasle ${5+Math.floor(i/2)}`;
+        a.termHours={1:10,2:10,3:10};
+        v40EnsureActivity(a);
+      });
+      const elkar=(S.activities||[]).filter(a=>a.measure==='He-Elkarrekin');
+      elkar.forEach(a=>{a.term='all';a.hours=2;a.teacher='Irakasle 15';a.termHours={1:20,2:20,3:20};v40EnsureActivity(a);});
+      const lagun=(S.activities||[]).filter(a=>a.measure==='He-Lagun izan');
+      lagun.forEach(a=>{a.term='all';a.hours=2;a.teacher='Irakasle 16';a.slot2=a.slot2||'sl6';a.termHours={1:20,2:20,3:20};v40EnsureActivity(a);});
+      const bide=(S.activities||[]).filter(a=>a.measure==='Bidelaguna');
+      bide.forEach(a=>{a.term='all';a.termHours={1:v40num(a.hours)*10,2:v40num(a.hours)*10,3:v40num(a.hours)*10};v40EnsureActivity(a);});
+
+      S._v40ItsasargiUrteOsoa=true;
+      S._v40ItsasargiUrteOsoa2=true;
+    }
+    S._v40=true;
+    try{saveSoft();}catch(e){}
+  }
+  v40Migrate();
+
+  // Wording: official objectives yes, achievement indicators no.
+  TR.eu.steps=['1 · Zergatik','2 · Jarduera eta antolaketa','3 · Hezi+ helburuak','4 · Koherentzia','5 · Ofizialera'];
+  TR.eu.logic='<strong>Lan-fluxua</strong><br>BEHARRA → HELBURUA → JARDUERA → JARRAIPENA<br><hr style="border:0;border-top:1px solid #dbe3ea;margin:10px 0"><small>HeziLabek egina Hezi+ proiekturako<br>CC BY-NC-SA 4.0</small>';
+  TR.eu.title.track=['Jarraipena','Gauzatzea, asistentzia, ebidentziak eta doikuntzak.'];
+  TR.eu.tabs={official:'Aplikazio ofizialerako datuak',activities:'Jardueren laburpena',teachers:'Irakasleak',checklist:'Kontrol-zerrenda',followup:'Jarraipena'};
+
+  function v40TimeOptions(v){return V40_TIMES.map(x=>`<option value="${x}" ${String(v)===x?'selected':''}>${x}</option>`).join('');}
+  function v40LoadOptions(v){return V40_LOADS.map(x=>`<option value="${x}" ${String(v||'1')===x?'selected':''}>${x}</option>`).join('');}
+
+  window.v40SetParticipants=function(v){S.center.participants=Math.max(0,v40num(v));saveSoft();render();};
+  window.v40AddPriority=function(){S.priorities.push({id:uid(),title:'Lehentasun berria',evidence:'',change:''});saveSoft();render();};
+  window.v40DelPriority=function(i){
+    const p=S.priorities[i]; if(!p)return;
+    if((S.activities||[]).some(a=>a.priority===p.id)){alert('Lehentasun hau jarduera bati lotuta dago. Aldatu jardueraren lotura ezabatu aurretik.');return;}
+    S.priorities.splice(i,1);saveSoft();render();
+  };
+
+  const v40BaseCenter=renderCenter;
+  renderCenter=function(){
+    v40BaseCenter();
+    centerMetrics.className='grid g5';
+    centerMetrics.innerHTML=[
+      ['DBH guztira',centerTotal()],
+      ['Irakasleak',(S.teachers||[]).length],
+      ['He-Indartuz',S.center.indHours+' h/aste'],
+      ['He-Hobetuz',S.center.hobHours+' h/aste'],
+      ['%50 helburua',Math.ceil(centerTotal()/2)]
+    ].map(x=>`<div class="card metric"><strong>${x[1]}</strong><span>${x[0]}</span></div>`).join('');
+    document.getElementById('v40Participation')?.remove();
+    {
+      centerMetrics.insertAdjacentHTML('afterend',`<div id="v40Participation" class="miniPanel"><div><b>Hezi+ parte-hartzaile bakarrak</b><div class="small">Ez dira jarduera guztietako matrikulazioak batu behar: ikasle bakoitza behin bakarrik zenbatu.</div></div><div style="min-width:180px"><input type="number" min="0" value="${v40num(S.center.participants)}" onchange="v40SetParticipants(this.value)"></div><span class="pill ${v40num(S.center.participants)>=Math.ceil(centerTotal()/2)?'ok':'warn'}">${centerTotal()?Math.round(v40num(S.center.participants)/centerTotal()*100):0}%</span></div>`);
+    }
+
+    slots.innerHTML=`<details class="panelAcc" open><summary><div><b>Ordu-tarteak</b><span class="small"> · ${(S.slots||[]).length} tarte · ${v40UniqueDays()} egun</span></div><span class="pill ${v40SlotHours()>=6&&v40UniqueDays()>=3?'ok':'warn'}">${v40SlotHours().toFixed(1)} h/aste</span></summary><div class="inside"><table class="tbl"><thead><tr><th>Zk.</th><th>Eguna</th><th>Hasiera</th><th>Amaiera</th><th></th></tr></thead><tbody>${(S.slots||[]).map((s,i)=>`<tr><td><input type="number" value="${v40esc(s.num)}" onchange="slot(${i},'num',this.value)"></td><td><select onchange="slot(${i},'day',DAYS_EU[this.selectedIndex])">${DAYS_EU.map((d,j)=>`<option ${s.day===d?'selected':''}>${days()[j]}</option>`).join('')}</select></td><td><select onchange="slot(${i},'start',this.value)">${v40TimeOptions(s.start)}</select></td><td><select onchange="slot(${i},'end',this.value)">${v40TimeOptions(s.end)}</select></td><td><button class="danger iconBtn" onclick="delSlot(${i})">×</button></td></tr>`).join('')}</tbody></table></div></details>`;
+
+    teachers.innerHTML=`<details class="panelAcc"><summary><div><b>Irakasle-zerrenda</b><span class="small"> · ${(S.teachers||[]).length} irakasle</span></div><span class="pill">Zerrenda zabaldu</span></summary><div class="inside"><table class="tbl"><thead><tr><th>Irakaslea</th><th>Ikasgaia</th><th>Mintegia</th><th>Lanaldia</th><th></th></tr></thead><tbody>${(S.teachers||[]).map((t,i)=>`<tr><td><input value="${v40esc(t.name)}" onchange="teach(${i},'name',this.value)"></td><td><input value="${v40esc(t.subject)}" onchange="teach(${i},'subject',this.value)"></td><td><input value="${v40esc(t.dept)}" onchange="teach(${i},'dept',this.value)"></td><td><select onchange="teach(${i},'load',this.value)">${v40LoadOptions(t.load)}</select></td><td><button class="danger iconBtn" onclick="delTeacher(${i})">×</button></td></tr>`).join('')}</tbody></table></div></details>`;
+
+    ped.innerHTML=`<div class="row between" style="margin-bottom:10px"><div class="small">Gehitu behar adina behar eta lehentasun; ez dago 3ra mugatuta.</div><button class="secondary" onclick="v40AddPriority()">+ Beharra / lehentasuna</button></div>`+(S.priorities||[]).map((p,i)=>`<div class="card priorityEdit" style="box-shadow:none;margin-bottom:10px"><div class="row between"><b>${i+1}. lehentasuna</b><button class="danger iconBtn" onclick="v40DelPriority(${i})">×</button></div><label>Izena</label><input value="${v40esc(p.title)}" onchange="prio(${i},'title',this.value)"><label>Abiapuntuko seinaleak / ebidentziak</label><textarea onchange="prio(${i},'evidence',this.value)">${v40esc(p.evidence)}</textarea><label>Espero den aldaketa</label><textarea onchange="prio(${i},'change',this.value)">${v40esc(p.change)}</textarea></div>`).join('');
+  };
+  window.renderCenter=renderCenter;
+
+  // Styled SpreadsheetML (Excel compatible, no external library required).
+  function v40Xml(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function v40Workbook(filename,sheets){
+    const styles=`<Styles>
+      <Style ss:ID="Default" ss:Name="Normal"><Alignment ss:Vertical="Center"/><Font ss:FontName="Aptos" ss:Size="10"/></Style>
+      <Style ss:ID="title"><Alignment ss:Vertical="Center"/><Font ss:FontName="Aptos Display" ss:Size="18" ss:Bold="1" ss:Color="#355A73"/><Interior ss:Color="#EAF5F5" ss:Pattern="Solid"/></Style>
+      <Style ss:ID="head"><Alignment ss:Vertical="Center" ss:WrapText="1"/><Font ss:FontName="Aptos" ss:Size="10" ss:Bold="1" ss:Color="#FFFFFF"/><Interior ss:Color="#355A73" ss:Pattern="Solid"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#D8E5EA"/></Borders></Style>
+      <Style ss:ID="sub"><Font ss:Bold="1" ss:Color="#355A73"/><Interior ss:Color="#E7F4F3" ss:Pattern="Solid"/></Style>
+      <Style ss:ID="text"><Alignment ss:Vertical="Top" ss:WrapText="1"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E3EAEE"/></Borders></Style>
+      <Style ss:ID="num"><Alignment ss:Horizontal="Center" ss:Vertical="Top"/><Borders><Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#E3EAEE"/></Borders></Style>
+      <Style ss:ID="ok"><Font ss:Bold="1" ss:Color="#2F855A"/><Interior ss:Color="#E9F7EF" ss:Pattern="Solid"/></Style>
+      <Style ss:ID="warn"><Font ss:Bold="1" ss:Color="#9A6500"/><Interior ss:Color="#FFF5DB" ss:Pattern="Solid"/></Style>
+    </Styles>`;
+    const cell=(v,style='text')=>`<Cell ss:StyleID="${style}"><Data ss:Type="${typeof v==='number'?'Number':'String'}">${v40Xml(v)}</Data></Cell>`;
+    const row=(vals,style)=>`<Row>${vals.map(v=>cell(v,style)).join('')}</Row>`;
+    let xml=`<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">${styles}`;
+    sheets.forEach(sh=>{
+      xml+=`<Worksheet ss:Name="${v40Xml(sh.name.slice(0,30))}"><Table>`;
+      if(sh.widths)(sh.widths||[]).forEach(w=>xml+=`<Column ss:Width="${w}"/>`);
+      if(sh.title)xml+=`<Row ss:Height="30"><Cell ss:MergeAcross="${Math.max(0,(sh.headers?.length||1)-1)}" ss:StyleID="title"><Data ss:Type="String">${v40Xml(sh.title)}</Data></Cell></Row>`;
+      if(sh.headers)xml+=row(sh.headers,'head');
+      (sh.rows||[]).forEach(r=>xml+=row(r));
+      xml+='</Table></Worksheet>';
+    });
+    xml+='</Workbook>';
+    download(filename,xml,'application/vnd.ms-excel;charset=utf-8');
+  }
+  downloadTeacherTemplate=function(){
+    v40Workbook('HeziPlus_irakasle_zerrenda_txantiloia.xls',[
+      {name:'Argibideak',title:'Hezi+ · Irakasle-zerrenda',headers:['Eremua','Nola bete'],widths:[150,420],rows:[['Irakaslea','Izen-abizenak.'],['Ikasgaia','Irakaslearen ikasgai nagusia.'],['Mintegia','Saila edo mintegia.'],['Lanaldia','Aukeratu: 1/3, 1/2, 2/3, 5/6 edo 1.'],['Oharra','Aplikazioan CSV edo eskuz ere sar daiteke zerrenda.']]},
+      {name:'Irakasleak',title:'Hezi+ · Irakasle-zerrenda betetzeko txantiloia',headers:['Irakaslea','Ikasgaia','Mintegia','Lanaldia'],widths:[180,160,210,90],rows:[['Irakasle 1','Euskara','Hizkuntzak','1'],['Irakasle 2','Matematika','Matematika','1'],['Irakasle 3','','','1']]}
+    ]);
+  };
+  window.downloadTeacherTemplate=downloadTeacherTemplate;
+
+  function v40OfficialObject(a,t){
+    v40EnsureActivity(a);
+    const g=v40Goals();
+    return {
+      'Nombre de la actividad / Jardueraren izena':a.name||'',
+      'Breve descripción de la actividad / Jardueraren deskribapen laburra':a.desc||'',
+      'Profesional responsable de la actividad / Jardueraren arduradun profesionala':a.teacher||'',
+      'N.º horas planificadas en el trimestre / Hiruhilekoan planifikatutako orduak':String(v40TermHours(a,t)||''),
+      'Tipología / Tipologia':a.measure||'',
+      'Subtipología / Azpitipologia':a.sub||'',
+      'Relación con los objetivos específicos / Helburu espezifikoekiko lotura':(a.objectives||[]).map(i=>'• '+(g[i]||'')).filter(Boolean).join('\n'),
+      'Cómputo alumnado 1.º ESO / DBH 1eko ikasle/talde kopurua':String(a.groups?.[0]||0),
+      'Cómputo alumnado 2.º ESO / DBH 2ko ikasle/talde kopurua':String(a.groups?.[1]||0),
+      'Cómputo alumnado 3.º ESO / DBH 3ko ikasle/talde kopurua':String(a.groups?.[2]||0),
+      'Cómputo alumnado 4.º ESO / DBH 4ko ikasle/talde kopurua':String(a.groups?.[3]||0)
+    };
+  }
+  officialText=function(a){return v40OfficialObject(a,String(a._officialTerm||'1'));};
+  window.officialText=officialText;
+
+  function v40GoalChecks(a){
+    return v40Goals().map((g,i)=>`<label class="goalChoice"><input type="checkbox" data-goal="${i}" ${a.objectives?.includes(i)?'checked':''}> <span><b>${i+1}</b> ${v40esc(g)}</span></label>`).join('');
+  }
+
+  body=function(s){
+    v40EnsureActivity(D);
+    if(s===0)return `<div class="callout"><b>Lehenik arrazoia.</b> Jarduera ez da helburua: identifikatutako behar bati eta zentroaren lehentasun bati erantzun behar dio.</div><div class="form2"><div><label>Lehentasuna</label><select id="wPriority">${priorityOptions(D.priority)}</select></div><div><label>Neurria</label><select id="wMeasure" onchange="D.measure=this.value;drawW()">${measureOptions(D.measure)}</select></div><div><label>Garapen-epea</label><select id="wTerm">${['all','1','2','3'].map(x=>`<option value="${x}" ${String(D.term)===x?'selected':''}>${termLabel(x)}</option>`).join('')}</select></div>${D.measure==='He-Hobetuz'?`<div><label>Ekosistema</label><select id="wEco"><option value="">— Aukeratu —</option>${ecos().map(e=>`<option ${D.ecosystem===e?'selected':''}>${v40esc(e)}</option>`).join('')}</select></div>`:''}<div class="full"><label>Identifikatutako beharra</label><textarea id="wNeed">${v40esc(D.need)}</textarea></div><div class="full"><label>Espero den aldaketa</label><textarea id="wChange">${v40esc(D.change)}</textarea></div></div>`;
+    if(s===1)return `<div class="form2"><div><label>Jardueraren izena</label><input id="wName" value="${v40esc(D.name)}"></div><div><label>Azpitipologia</label><input id="wSub" value="${v40esc(D.sub)}"></div><div class="full"><label>Jardueraren deskribapen laburra</label><textarea id="wDesc">${v40esc(D.desc)}</textarea></div><div><label>Arduradun profesionala</label><select id="wTeacher">${teacherOptions(D.teacher)}</select></div><div><label>Maila / hartzaileak</label><input id="wLevel" value="${v40esc(D.level)}"></div><div><label>Asteko orduak</label><input id="wHours" type="number" min="0" step="0.25" value="${v40num(D.hours)}"></div><div><label>Ikasle kopuru orientagarria</label><input id="wStudents" type="number" min="0" value="${v40num(D.students)}"></div><div><label>Ordu-tartea 1</label><select id="wSlot">${(S.slots||[]).map(x=>`<option value="${x.id}" ${D.slot===x.id?'selected':''}>${slotName(x.id)}</option>`).join('')}</select></div><div><label>Ordu-tartea 2</label><select id="wSlot2"><option value="">—</option>${(S.slots||[]).map(x=>`<option value="${x.id}" ${D.slot2===x.id?'selected':''}>${slotName(x.id)}</option>`).join('')}</select></div><div class="full"><div class="officialDataBox"><b>Aplikazio ofizialerako ikasle/talde konputua</b><div class="form4"><div><label>DBH 1</label><input id="wG0" type="number" min="0" value="${v40num(D.groups?.[0])}"></div><div><label>DBH 2</label><input id="wG1" type="number" min="0" value="${v40num(D.groups?.[1])}"></div><div><label>DBH 3</label><input id="wG2" type="number" min="0" value="${v40num(D.groups?.[2])}"></div><div><label>DBH 4</label><input id="wG3" type="number" min="0" value="${v40num(D.groups?.[3])}"></div></div></div></div><div class="full"><div class="officialDataBox"><b>Hiruhilekoan planifikatutako orduak</b><div class="small">Asteko orduekin automatikoki kalkulatu daitezke; editagarriak dira, egutegi errealera doitzeko.</div><div class="form3"><div><label>1. hiruhilekoa</label><input id="wH1" type="number" min="0" step="0.5" value="${v40TermHours(D,1)}"></div><div><label>2. hiruhilekoa</label><input id="wH2" type="number" min="0" step="0.5" value="${v40TermHours(D,2)}"></div><div><label>3. hiruhilekoa</label><input id="wH3" type="number" min="0" step="0.5" value="${v40TermHours(D,3)}"></div></div></div></div></div>`;
+    if(s===2)return `<div class="callout"><b>Hezi+ aplikazio ofizialeko helburuak.</b> Hautatu jarduerarekin benetan lotzen direnak. Ez dira lorpen-adierazleak eskatzen; beraz, ez dugu hemen adierazle paralelorik sortuko.</div><div class="goalGrid" style="margin-top:12px">${v40GoalChecks(D)}</div>`;
+    if(s===3){
+      const c=[['Beharra identifikatuta',D.need],['Lehentasuna hautatuta',D.priority],['Neurria hautatuta',D.measure],['Jarduera deskribatuta',D.desc],['Arduraduna',D.teacher],['Hezi+ helburua(k)',(D.objectives||[]).length>0],['He-Hobetuz ekosistema',D.measure!=='He-Hobetuz'||D.ecosystem],['Asteko orduak',v40num(D.hours)>0],['Hiruhilekoko orduak',[1,2,3].some(t=>v40TermHours(D,t)>0)]];
+      return `<div class="callout"><b>${c.filter(x=>x[1]).length}/${c.length}</b> elementu osatuta. Koherentzia egiaztatu eta ofizialerako transferentziara pasa.</div><div class="coh" style="margin-top:12px">${c.map(x=>`<div><span>${x[0]}</span><b style="color:${x[1]?'var(--ok)':'var(--r)'}">${x[1]?'✓':'!'}</b></div>`).join('')}</div>`;
+    }
+    if(s===4){
+      D._officialTerm=String(D._officialTerm||'1');
+      const obj=v40OfficialObject(D,D._officialTerm);
+      return `<div class="officialNote"><strong>Aplikazio ofizialak eskatzen dituen eremuak bakarrik.</strong> Ez da lorpen-adierazlerik, ebidentziarik edo barne-oharrik kopiatzen.</div><div class="form2"><div><label>Kopiatzeko hiruhilekoa</label><select onchange="D._officialTerm=this.value;drawW()">${['1','2','3'].map(t=>`<option value="${t}" ${D._officialTerm===t?'selected':''}>${termLabel(t)}</option>`).join('')}</select></div><div class="small" style="align-self:end;padding-bottom:10px">Hiruhilekoko orduak: <b>${v40TermHours(D,D._officialTerm)} h</b></div></div>`+Object.entries(obj).map(([k,v],i)=>`<label>${v40esc(k)}</label><div class="copy" id="cpw40_${i}">${v40esc(v)}<button class="secondary" onclick="copyText('cpw40_${i}')">Kopiatu</button></div>`).join('');
+    }
+    return '';
+  };
+  window.body=body;
+
+  cap=function(){
+    const x=id=>document.getElementById(id);
+    if(step===0){D.priority=x('wPriority')?.value||D.priority;D.measure=x('wMeasure')?.value||D.measure;D.term=x('wTerm')?.value||D.term;if(D.measure==='He-Hobetuz')D.ecosystem=x('wEco')?.value||'';else D.ecosystem='';D.need=x('wNeed')?.value||'';D.change=x('wChange')?.value||'';}
+    if(step===1){D.name=x('wName')?.value||'';D.sub=x('wSub')?.value||'';D.desc=x('wDesc')?.value||'';D.teacher=x('wTeacher')?.value||'';D.level=x('wLevel')?.value||'';D.hours=v40num(x('wHours')?.value);D.students=v40num(x('wStudents')?.value);D.slot=x('wSlot')?.value||'';D.slot2=x('wSlot2')?.value||'';D.groups=[0,1,2,3].map(i=>v40num(x('wG'+i)?.value));D.termHours={1:v40num(x('wH1')?.value),2:v40num(x('wH2')?.value),3:v40num(x('wH3')?.value)};}
+    if(step===2){D.objectives=[...document.querySelectorAll('[data-goal]:checked')].map(el=>+el.dataset.goal);}
+  };
+  window.cap=cap;
+  const v40OldSaveDraft=saveDraft;
+  saveDraft=function(closeAfter=false){try{cap();}catch(e){}v40EnsureActivity(D);return v40OldSaveDraft(closeAfter);};
+  window.saveDraft=saveDraft;
+  nextS=function(){try{cap();}catch(e){}if(step<4){step++;drawW();}else{saveDraft(true);}};
+  prevS=function(){try{cap();}catch(e){}if(step>0){step--;drawW();}};
+  window.nextS=nextS;window.prevS=prevS;
+
+  function v40TermBar(kind){
+    const val=S[kind]||'all';
+    const labs={all:'Ikasturte osoa',1:'1. hiruhilekoa',2:'2. hiruhilekoa',3:'3. hiruhilekoa'};
+    return `<div class="termTools">${['all','1','2','3'].map(t=>`<button class="termBtn ${String(val)===t?'active':''}" onclick="S.${kind}='${t}';saveSoft();render()">${labs[t]}</button>`).join('')}</div>`;
+  }
+  function v40TrackingStatus(a){
+    const f=a.followup||{},ex=v40num(f.executionPct)||0,att=v40num(f.attendancePct)||v40num(a.att)||0;
+    if(ex>=70&&att>=70)return ['Bidean','ok'];
+    if(ex>0||att>0)return ['Begiratu','warn'];
+    return ['Hasi gabe',''];
+  }
+  window.v40Follow=function(id,field,value){const a=S.activities.find(x=>x.id===id);if(!a)return;a.followup=a.followup||{};a.followup[field]=field.includes('Pct')?v40num(value):value;saveSoft();render();};
+  renderTrack=function(){
+    const t=S.trackTerm||'all',acts=v40ActivitiesTerm(t);
+    trackH2.textContent='Jarraipena';trackP.textContent='Gauzatzea, asistentzia, ebidentziak eta hurrengo doikuntza.';
+    const planned=t==='all'?acts.reduce((s,a)=>s+v40AnnualHours(a),0):acts.reduce((s,a)=>s+v40TermHours(a,t),0);
+    tgrid.innerHTML=`<div class="trackTools"><div>${v40TermBar('trackTerm')}</div><div class="row"><button class="primary" onclick="downloadFollowupWorkbook()">Jarraipen Excel deskargatu</button></div></div><div class="grid g3" style="margin-bottom:14px"><div class="card metric"><strong>${acts.length}</strong><span>Jarduera</span></div><div class="card metric"><strong>${planned} h</strong><span>${t==='all'?'Urteko ordu planifikatuak':'Hiruhilekoko ordu planifikatuak'}</span></div><div class="card metric"><strong>${acts.filter(a=>v40num(a.followup?.executionPct)>0).length}</strong><span>Jarraipena hasita</span></div></div><div class="grid g2">${acts.map(a=>{const f=a.followup||{},st=v40TrackingStatus(a);return `<details class="ac activity ${typeCls(a.measure)}"><summary><div class="row between"><div><span class="small">${v40esc(a.measure)} · ${v40esc(a.ecosystem||'')} </span><h3>${v40esc(a.name)}</h3></div><span class="pill ${st[1]}">${st[0]}</span></div></summary><div class="inside"><div class="form3"><div><label>Gauzatzea (%)</label><input type="number" min="0" max="100" value="${v40num(f.executionPct)}" onchange="v40Follow('${a.id}','executionPct',this.value)"></div><div><label>Asistentzia (%)</label><input type="number" min="0" max="100" value="${v40num(f.attendancePct)||v40num(a.att)}" onchange="v40Follow('${a.id}','attendancePct',this.value)"></div><div><label>Balorazioa</label><select onchange="v40Follow('${a.id}','valuation',this.value)"><option value="">—</option>${['Mantendu','Doitu','Zabaldu','Gelditu'].map(x=>`<option ${f.valuation===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="full"><label>Ebidentzia / emaitza laburra</label><textarea onchange="v40Follow('${a.id}','evidence',this.value)">${v40esc(f.evidence||'')}</textarea></div><div class="full"><label>Jarraipen-oharrak</label><textarea onchange="v40Follow('${a.id}','notes',this.value)">${v40esc(f.notes||'')}</textarea></div><div class="full"><label>Hurrengo doikuntza</label><textarea onchange="v40Follow('${a.id}','adjustment',this.value)">${v40esc(f.adjustment||'')}</textarea></div></div></div></details>`;}).join('')||'<div class="card">Ez dago jarduerarik.</div>'}</div>`;
+  };
+  window.renderTrack=renderTrack;
+
+  downloadFollowupWorkbook=function(){
+    const term=S.trackTerm||'all';
+    const acts=v40ActivitiesTerm(term);
+    const followRows=acts.map(a=>{const f=a.followup||{};return [a.id,a.name,a.measure,a.ecosystem||'',a.teacher||'',term==='all'?v40AnnualHours(a):v40TermHours(a,term),v40num(f.executionPct),v40num(f.attendancePct)||v40num(a.att),f.valuation||'',f.evidence||'',f.notes||'',f.adjustment||''];});
+    const teacherRows=v40TeacherRows('all').map(x=>[x.name,x.subject,x.dept,x.load,x.hours,x.status,x.activities]);
+    const checks=v40Checklist().map(x=>[x.t,x.ok?'BETETA':'BERRIKUSI']);
+    v40Workbook('HeziPlus_jarraipena_ikasturtekoa.xls',[
+      {name:'Argibideak',title:'Hezi+ · Ikasturteko jarraipena',headers:['Atala','Erabilera'],widths:[170,430],rows:[['Laburpena','Jarduera bakoitzaren gauzatzea, asistentzia, balorazioa, ebidentzia eta doikuntza.'],['Irakasleak','Urteko ordu metatuak eta oreka ikuspegia.'],['Kontrola','Ebazpeneko eta plangintzako gutxieneko nagusien egiaztapena.'],['Oharra','Fitxategi hau lanerako eta jarraipenerako da; erregistro ofiziala HIKUn egiten da.']]},
+      {name:'Laburpena',title:'Hezi+ · Jardueren jarraipena',headers:['ID','Jarduera','Neurria','Ekosistema','Arduraduna','Planifikatutako orduak','Gauzatzea %','Asistentzia %','Balorazioa','Ebidentzia / emaitza','Oharrak','Hurrengo doikuntza'],widths:[90,260,110,190,150,105,85,85,95,260,230,230],rows:followRows},
+      {name:'Irakasleak',title:'Hezi+ · Irakasleen urteko orduen oreka',headers:['Irakaslea','Ikasgaia','Mintegia','Lanaldia','Urteko orduak','Oreka','Jarduerak'],widths:[170,140,190,80,95,95,360],rows:teacherRows},
+      {name:'Kontrola',title:'Hezi+ · Gutxienekoen kontrol-zerrenda',headers:['Egiaztapena','Egoera'],widths:[470,110],rows:checks}
+    ]);
+  };
+  window.downloadFollowupWorkbook=downloadFollowupWorkbook;
+
+  function v40TeacherRows(term){
+    const acts=v40ActivitiesTerm(term);
+    const map={};
+    (S.teachers||[]).forEach(t=>map[t.name]={...t,hours:0,arr:[]});
+    acts.forEach(a=>{if(!a.teacher)return;if(!map[a.teacher])map[a.teacher]={name:a.teacher,subject:'',dept:'',load:'',hours:0,arr:[]};map[a.teacher].hours+=term==='all'?v40AnnualHours(a):v40TermHours(a,term);map[a.teacher].arr.push(a.name);});
+    const active=Object.values(map).filter(x=>x.hours>0),avg=active.length?active.reduce((s,x)=>s+x.hours,0)/active.length:0;
+    return Object.values(map).map(x=>{let status='—';if(x.hours>0&&avg){const r=x.hours/avg;status=r>1.25?'Altua':r<0.75?'Baxua':'Orekatua';}return {...x,status,activities:x.arr.join(' · '),avg};});
+  }
+
+  function v40Checklist(){
+    const rows=[];
+    const participants=v40num(S.center.participants),target=Math.ceil(centerTotal()/2);
+    const ecos=[...new Set((S.activities||[]).filter(a=>a.measure==='He-Hobetuz').map(a=>a.ecosystem).filter(Boolean))];
+    rows.push({t:'Ikastetxearen datuak osatuta',ok:!!S.center.name&&centerTotal()>0});
+    rows.push({t:`Parte-hartzaile bakarrak: gutxienez %50 (${participants}/${target})`,ok:participants>=target});
+    rows.push({t:`Hezi+ ordutegi-franja: gutxienez 6 h/aste (${v40SlotHours().toFixed(1)} h)`,ok:v40SlotHours()>=6});
+    rows.push({t:`Hezi+ ordutegi-franja: gutxienez 3 egun (${v40UniqueDays()} egun)`,ok:v40UniqueDays()>=3});
+    [1,2,3].forEach(t=>rows.push({t:`${t}. hiruhilekoa · He-Indartuz ${v40MeasureWeekly('He-Indartuz',t)}/${v40num(S.center.indHours)} h/aste`,ok:v40MeasureWeekly('He-Indartuz',t)>=v40num(S.center.indHours)}));
+    [1,2,3].forEach(t=>rows.push({t:`${t}. hiruhilekoa · He-Hobetuz ${v40MeasureWeekly('He-Hobetuz',t)}/${v40num(S.center.hobHours)} h/aste`,ok:v40MeasureWeekly('He-Hobetuz',t)>=v40num(S.center.hobHours)}));
+    rows.push({t:`He-Hobetuz: gutxienez 3 ekosistema (${ecos.length}/3)`,ok:ecos.length>=3});
+    const chosen=S.measures.abe==='he-aberastuz'?'He-Aberastuz':'Bidelaguna';
+    rows.push({t:`${chosen} aukeratuta eta jardueretan jasota`,ok:(S.activities||[]).some(a=>a.measure===chosen)});
+    if(S.measures.lagun)rows.push({t:'He-Lagun izan: gutxienez 1 h/aste planifikatuta',ok:[1,2,3].some(t=>v40MeasureWeekly('He-Lagun izan',t)>=1)});
+    rows.push({t:'Jarduera guztiek aplikazio ofizialeko Hezi+ helburu bat gutxienez hautatuta',ok:(S.activities||[]).every(a=>(a.objectives||[]).length>0)});
+    rows.push({t:'Beharrak eta lehentasunak definituta',ok:(S.priorities||[]).length>0});
+    return rows;
+  }
+  checklist=v40Checklist;window.checklist=checklist;
+
+  function v40DownloadCatalog(){
+    const acts=(S.activities||[]).filter(a=>a.measure!=='He-Indartuz');
+    const cards=acts.map(a=>`<article><div class="meta">${v40esc(a.measure)}${a.ecosystem?' · '+v40esc(a.ecosystem):''}</div><h2>${v40esc(a.name)}</h2><p>${v40esc(a.desc||'')}</p><div class="facts"><b>Hartzaileak:</b> ${v40esc(a.level||'DBH')} · <b>Ordutegia:</b> ${v40esc(slotName(a.slot)||'zehazteke')}${a.slot2?' + '+v40esc(slotName(a.slot2)):''}</div><div class="goal"><b>Zer lortu nahi dugu?</b><br>${v40esc(a.change||'')}</div></article>`).join('');
+    const html=`<!doctype html><html lang="eu"><head><meta charset="utf-8"><title>Hezi+ jardueren katalogoa</title><style>body{font-family:Arial,sans-serif;margin:0;background:#f6fafb;color:#263238}.hero{padding:36px;background:linear-gradient(135deg,#355a73,#70b7ad);color:white}.hero h1{margin:0 0 8px}.wrap{padding:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}article{background:white;border:1px solid #dfe8ed;border-radius:18px;padding:18px;box-shadow:0 8px 20px #355a7314}.meta{font-size:12px;font-weight:bold;color:#497284}.facts,.goal{font-size:13px;margin-top:12px;padding:10px;border-radius:10px;background:#f1f8f9}.goal{background:#eef7f3}@media print{body{background:white}.wrap{grid-template-columns:repeat(2,1fr)}article{box-shadow:none;break-inside:avoid}}</style></head><body><div class="hero"><h1>${v40esc(S.center.name||'Hezi+')} · Jardueren katalogoa</h1><div>${v40esc(S.center.year||'2026-2027')} · Familientzat eta ikasleentzat</div></div><div class="wrap">${cards}</div></body></html>`;
+    download('HeziPlus_jardueren_katalogoa.html',html,'text/html;charset=utf-8');
+  }
+  window.v40DownloadCatalog=v40DownloadCatalog;
+
+  renderSummary=function(){
+    summaryH2.textContent='Laburpena';summaryP.textContent='Ofizialerako transferentzia, jardueren katalogoa, irakasleen orduak eta gutxienekoen kontrola.';
+    const tabs=TR.eu.tabs;
+    summaryTabs.innerHTML=Object.entries(tabs).map(([k,v])=>`<button class="secondary ${S.summaryMode===k?'active':''}" onclick="S.summaryMode='${k}';saveSoft();render()">${v}</button>`).join('');
+    const t=S.summaryTerm||'all',acts=v40ActivitiesTerm(t);
+    let html=v40TermBar('summaryTerm');
+    if(S.summaryMode==='official'){
+      if(t==='all') html+=`<div class="callout"><b>Aukeratu 1., 2. edo 3. hiruhilekoa.</b> HIKUko eremuak hiruhilekoka kopiatuko dira, eta planifikatutako orduak dagokion hiruhilekoko kopuruarekin agertuko dira.</div>`;
+      else html+=acts.map((a,i)=>`<details class="ac" ${i===0?'open':''}><summary><b>${v40esc(a.name)}</b> <span class="pill">${v40esc(a.measure)}</span></summary><div class="inside">${Object.entries(v40OfficialObject(a,t)).map(([k,v],j)=>`<label>${v40esc(k)}</label><div class="copy" id="cp40_${a.id}_${j}">${v40esc(v)}<button class="secondary" onclick="copyText('cp40_${a.id}_${j}')">Kopiatu</button></div>`).join('')}</div></details>`).join('');
+    }else if(S.summaryMode==='activities'){
+      html+=`<div class="summaryAction"><div><b>Jardueren mapa</b><div class="small">Barne-laburpena eta familiei aurkezteko katalogoa.</div></div><button class="primary" onclick="v40DownloadCatalog()">Katalogoa deskargatu</button></div><div class="tableWrap"><table class="tbl"><thead><tr><th>Jarduera</th><th>Neurria</th><th>Asteko orduak</th><th>${t==='all'?'Urteko orduak':'Hiruhilekoko orduak'}</th><th>Arduraduna</th><th>Ekosistema</th><th>Hartzaileak</th></tr></thead><tbody>${acts.map(a=>`<tr><td><b>${v40esc(a.name)}</b></td><td>${v40esc(a.measure)}</td><td>${v40num(a.hours)}</td><td>${t==='all'?v40AnnualHours(a):v40TermHours(a,t)}</td><td>${v40esc(a.teacher)}</td><td>${v40esc(a.ecosystem||'—')}</td><td>${v40esc(a.level||'')} · ${v40num(a.students)}</td></tr>`).join('')}</tbody></table></div>`;
+    }else if(S.summaryMode==='teachers'){
+      const rows=v40TeacherRows(t),active=rows.filter(x=>x.hours>0),avg=active.length?active[0].avg:0,min=active.length?Math.min(...active.map(x=>x.hours)):0,max=active.length?Math.max(...active.map(x=>x.hours)):0;
+      html+=`<div class="grid g4 teacherKpis"><div class="card metric"><strong>${(S.teachers||[]).length}</strong><span>Irakasle guztira</span></div><div class="card metric"><strong>${active.length}</strong><span>Hezi+en aktibo</span></div><div class="card metric"><strong>${Math.round(avg)} h</strong><span>Batez besteko ${t==='all'?'urteko':'hiruhilekoko'} orduak</span></div><div class="card metric"><strong>${min}-${max} h</strong><span>Tarteen arteko aldea</span></div></div><div class="callout"><b>Oreka-irizpidea:</b> irakasle aktibo bakoitzaren orduak batez bestekoarekiko ±25% tartean badaude, “Orekatua” agertuko da. Horrela, karga desorekak berehala ikus daitezke.</div><div class="tableWrap"><table class="tbl"><thead><tr><th>Irakaslea</th><th>Ikasgaia</th><th>Mintegia</th><th>Lanaldia</th><th>${t==='all'?'Urteko orduak':'Hiruhilekoko orduak'}</th><th>Oreka</th><th>Jarduerak</th></tr></thead><tbody>${rows.map(x=>`<tr class="${x.hours===0?'mutedRow':''}"><td><b>${v40esc(x.name)}</b></td><td>${v40esc(x.subject)}</td><td>${v40esc(x.dept)}</td><td>${v40esc(x.load)}</td><td><b>${x.hours}</b></td><td><span class="pill ${x.status==='Orekatua'?'ok':x.status==='—'?'':'warn'}">${x.status}</span></td><td>${v40esc(x.activities)}</td></tr>`).join('')}</tbody></table></div>`;
+    }else if(S.summaryMode==='followup'){
+      html+=`<div class="summaryAction"><div><b>Jarraipen-laburpena</b><div class="small">Excelera eramateko ikuspegi bera.</div></div><button class="primary" onclick="downloadFollowupWorkbook()">Jarraipen Excel deskargatu</button></div><table class="tbl"><thead><tr><th>Jarduera</th><th>Gauzatzea</th><th>Asistentzia</th><th>Balorazioa</th><th>Hurrengo doikuntza</th></tr></thead><tbody>${acts.map(a=>{const f=a.followup||{};return `<tr><td>${v40esc(a.name)}</td><td>${v40num(f.executionPct)}%</td><td>${v40num(f.attendancePct)||v40num(a.att)}%</td><td>${v40esc(f.valuation||'—')}</td><td>${v40esc(f.adjustment||'')}</td></tr>`}).join('')}</tbody></table>`;
+    }else{
+      html+=`<div class="checkGrid">${v40Checklist().map(x=>`<div class="checkItem ${x.ok?'done':'todo'}"><span>${x.ok?'✓':'!'}</span><div>${v40esc(x.t)}</div></div>`).join('')}</div>`;
+    }
+    summaryContent.innerHTML=html;
+  };
+  window.renderSummary=renderSummary;
+
+  const v40BaseRender=render;
+  render=function(){
+    v40Migrate();
+    v40BaseRender();
+    document.getElementById('topTools')?.remove();
+    const teacherTpl=document.getElementById('teacherTplBtn');if(teacherTpl)teacherTpl.textContent='Excel txantiloia';
+    const logic=document.getElementById('logic');if(logic)logic.innerHTML=TR.eu.logic;
+  };
+  window.render=render;
+
+
+  // Laguntza eta jarduera-fitxa ere egokitu: adierazle paralelorik ez erakutsi.
+  renderHelp=function(){
+    helpContent.innerHTML=`<div class="card"><h2 style="color:var(--n);margin-top:0">Nola erabili tresna</h2><div class="guideSteps"><div><b>1 · Nire zentroa</b><br>Egiaztatu ikastetxeko datuak, neurriak, asteko ordu-tarteak eta irakasle-zerrenda.</div><div><b>2 · Beharrak eta lehentasunak</b><br>Gehitu behar diren lehentasunak eta lotu ebidentzia/abiapuntua eta espero den aldaketa.</div><div><b>3 · Jarduerak</b><br>Definitu jarduera, arduraduna, orduak, ikasle/talde kopuruak eta Hezi+ helburu ofizialak.</div><div><b>4 · Jarraipena</b><br>Jaso gauzatzea, asistentzia, ebidentzia, balorazioa eta hurrengo doikuntza.</div><div><b>5 · Ofizialera</b><br>Kopiatu aplikazio ofizialak eskatzen dituen eremuak bakarrik, hiruhilekoz hiruhileko.</div><div><b>6 · Laburpena</b><br>Egiaztatu gutxienekoak, irakasleen urteko orduen oreka eta deskargatu katalogoa/jarraipen Excela.</div></div></div><div class="card"><h2 style="color:var(--n);margin-top:0">Diseinu-printzipioa</h2><div class="callout"><strong>BEHARRA → HEZI+ HELBURUA → JARDUERA → JARRAIPENA → DOIKUNTZA</strong></div><p>Tresnak ez du lorpen-adierazle paralelorik eskatzen edo sortzen. Helburua plangintza koherentea egitea eta HIKUra transferitu beharreko informazioa prest uztea da.</p></div>`;
+  };
+  window.renderHelp=renderHelp;
+
+  openInfo=function(id){
+    const a=S.activities.find(x=>x.id===id);if(!a)return;
+    const goals=(a.objectives||[]).map(i=>v40Goals()[i]).filter(Boolean);
+    infoTitle.textContent=a.name;
+    infoSub.textContent=`${a.measure} · ${termLabel(a.term)} · ${slotName(a.slot)}`;
+    infoBody.innerHTML=`<div class="grid g2"><div class="card"><b>Deskribapena</b><p>${v40esc(a.desc||'—')}</p></div><div class="card"><b>Hezi+ helburuak</b>${goals.length?`<ul>${goals.map(g=>`<li>${v40esc(g)}</li>`).join('')}</ul>`:'<p>—</p>'}</div><div class="card"><b>Antolaketa</b><p>${v40esc(a.teacher||'—')} · ${v40num(a.hours)} h/aste<br>${v40esc(a.level||'—')} · ${v40esc(slotName(a.slot)||'—')}</p></div><div class="card"><b>Urteko ordu-plangintza</b><p>1H: ${v40TermHours(a,1)} h · 2H: ${v40TermHours(a,2)} h · 3H: ${v40TermHours(a,3)} h<br><strong>Guztira: ${v40AnnualHours(a)} h</strong></p></div></div>`;
+    infoModal.classList.add('open');
+  };
+  window.openInfo=openInfo;
+
+  saveSoft();
+  render();
+})();
+
+</script>
+
+<style id="v41-style">
+
+  .v41-goals{display:grid;gap:8px}.v41-goal{display:grid;grid-template-columns:minmax(240px,.9fr) minmax(300px,1.1fr);gap:12px;border:1px solid var(--l);border-radius:13px;padding:12px;background:#fbfdfe}.v41-goal .goalName{font-size:13px;line-height:1.4}.v41-goal textarea{min-height:76px;margin-top:6px}.v41-bank-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.v41-bank-card{border:1px solid var(--l);border-radius:15px;padding:14px;background:#fff}.v41-bank-card h3{margin:5px 0 8px;color:var(--n);font-size:16px}.v41-bank-card p{margin:6px 0;font-size:12px;color:var(--m);line-height:1.45}.v41-bank-tools{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:8px;margin-bottom:14px}.v41-indicators{border-top:1px solid var(--l);margin-top:14px;padding-top:12px}.v41-indicators ol{margin:7px 0 0;padding-left:20px}.v41-indicators li{margin-bottom:6px;font-size:12px;line-height:1.4}.v41-follow-example{background:#f7fbfc;border:1px solid var(--l);border-radius:11px;padding:10px;margin-top:10px}.v41-follow-example b{color:var(--n)}
+  @media(max-width:800px){.v41-goal,.v41-bank-tools{grid-template-columns:1fr}.v41-bank-grid{grid-template-columns:1fr}}
+
+</style>
+<script id="v41-patch">
+
+(function(){
+  const V41='4.1';
+  const WEEKS={1:10,2:10,3:10};
+  const LOADS=['1/3','1/2','2/3','5/6','1'];
+  const esc=s=>E(s==null?'':String(s));
+  const num=v=>{const n=Number(String(v??'').replace(',','.'));return Number.isFinite(n)?n:0;};
+  const goals=()=>{try{return objs();}catch(e){return []}};
+  const activeInTerm=(a,t)=>String(a.term)==='all'||String(a.term)===String(t);
+  const termHours=(a,t)=> a.termHours&&a.termHours[t]!=null ? num(a.termHours[t]) : (activeInTerm(a,t)?num(a.hours)*WEEKS[t]:0);
+  const annualHours=a=>[1,2,3].reduce((s,t)=>s+termHours(a,t),0);
+  const actsTerm=t=>(S.activities||[]).filter(a=>t==='all'||activeInTerm(a,t));
+
+  function baseName(n){return String(n||'').replace(/\s*·\s*DBH\s*[1-4](?:\s*[-–]\s*[1-4])?.*$/i,'').trim();}
+  const LIB_SOURCE=(typeof DEF!=='undefined'&&Array.isArray(DEF.activities)?DEF.activities:(S.activities||[]));
+  const V41_LIBRARY=[]; const seen=new Set();
+  LIB_SOURCE.forEach(a=>{const k=(a.measure||'')+'|'+baseName(a.name);if(!baseName(a.name)||seen.has(k))return;seen.add(k);const c=JSON.parse(JSON.stringify(a));c.name=baseName(c.name);V41_LIBRARY.push(c);});
+
+  function indicatorTemplate(i,a){
+    const g=goals()[i]||'';
+    if(i===0) return 'Jardueraren planifikatutako saioen gutxienez %80 gauzatu dira, eta irakurmena eta/edo matematika lantzeko zereginak jardueraren programazioan esplizituki jasota daude.';
+    if(i===1) return 'Jardueraren planifikatutako saioen gutxienez %80 gauzatu dira eta aurreikusitako esperientzia edo azken produktua osatu da.';
+    if(i===2) return 'Jardueraren aurreikusitako parte-hartze mailaren gutxienez %70 lortu da eta gutxienez komunikazio-ekintza 1 gauzatu da ikasleekin eta/edo familiekin.';
+    if(i===3) return 'Jardueran aurreikusitako ekitate- eta sarbide-neurrien %100 aplikatu dira eta jarraipen-erregistroan dokumentatuta daude.';
+    if(i===4) return 'Jardueran gutxienez berrikuntza metodologikoko elementu 1 eta irakasleen koordinazio-ekintza 1 gauzatu eta dokumentatu dira.';
+    if(i===5) return 'Jarduerak gutxienez sareko kontraste edo partekatze-ekintza 1 egin du eta baliabide edo emaitza 1 partekatu du.';
+    return `Jardueraren garapena neurtzeko adierazlea: ${g}`;
+  }
+  function ensureIndicators(a,force=false){
+    if(!Array.isArray(a.objectives))a.objectives=[];
+    if(!a._goalIndicators)a._goalIndicators={};
+    // migrate existing texts onto selected goals when possible
+    if(Array.isArray(a.ach)) a.objectives.forEach((g,pos)=>{if(!a._goalIndicators[g]&&a.ach[pos])a._goalIndicators[g]=a.ach[pos];});
+    a.objectives.forEach(g=>{if(force||!a._goalIndicators[g])a._goalIndicators[g]=indicatorTemplate(g,a);});
+    a.ach=a.objectives.map(g=>a._goalIndicators[g]).filter(Boolean);
+    return a;
+  }
+  if(!S._v41ActivityIndicators){(S.activities||[]).forEach(a=>ensureIndicators(a,true));S._v41ActivityIndicators=true;saveSoft();}else{(S.activities||[]).forEach(a=>ensureIndicators(a));}
+
+  // Itsasargi: jarraipen errealista, ez perfektua.
+  function followExample(){
+    const its=/ITS|Itsasargi/i.test(String(S.center?.code||'')+' '+String(S.center?.name||''));
+    if(!its||S._v41FollowExample)return;
+    const rows=[
+      [92,78,'Mantendu','Planifikatutako saio gehienak egin dira; testu akademikoen sekuentzia eta erregistroa osatuta.','2. hiruhilekoan inferentzia eta informazio-kontrastea indartu.'],
+      [84,69,'Doitu','Saioak egin dira, baina asistentzia ez da aurreikusitako mailara iritsi.','Ordutegia eta ikasleen deialdia berrikusi.'],
+      [100,83,'Zabaldu','Programatutako lana osatu da eta problema-erronka guztiak gauzatu dira.','Datuen interpretazioarekin lotutako erronka berri bat gehitu.'],
+      [73,64,'Doitu','Gauzatzea partziala izan da eta bi saio bertan behera geratu dira.','Saioak berrantolatu eta talde txikiagoak probatu.'],
+      [88,76,'Mantendu','Eskola-irratiko saioak martxan; bi audio-pieza eta elkarrizketa bat egin dira.','Familiei eta komunitateari zabaltzeko argitalpen-egutegia zehaztu.'],
+      [62,71,'Doitu','Datu-bilketa egin da, baina kanpo-lanaren zati bat eguraldiagatik atzeratu da.','Kanpo-lanerako ordezko data eta barruko datu-analisia prestatu.'],
+      [0,0,'','',''],
+      [95,81,'Zabaldu','Jarduera aurreikusitako moduan garatu da eta udalarekin aurkezpen bat egin da.','Hurrengo zikloan beste eragile komunitario bat gehitu.'],
+      [55,58,'Gelditu','Parte-hartze baxua eta ordutegi-gatazkak errepikatu dira.','Formatu laburragoa diseinatu eta berriro baloratu 3. hiruhilekorako.'],
+      [80,73,'Mantendu','Jarduera egin da; jarraipen-fitxak osatuta daude.','Euskarazko ahozko erabilera esplizituago txertatu.']
+    ];
+    (S.activities||[]).slice(0,rows.length).forEach((a,i)=>{const r=rows[i];a.followup={executionPct:r[0],attendancePct:r[1],valuation:r[2],evidence:r[3],notes:i===6?'Oraindik ez da jarraipen-daturik sartu.':'',adjustment:r[4]};a.done=r[0]?Math.round(annualHours(a)*r[0]/100):0;a.att=r[1];});
+    S._v41FollowExample=true;saveSoft();
+  }
+  followExample();
+
+  // Hizkuntza eta testu laburragoak.
+  TR.eu.steps=['1 · Abiapuntua','2 · Jarduera','3 · Helburuak + adierazleak','4 · Egiaztatu','5 · Ofizialera'];
+  TR.eu.logic='<strong>BEHARRA → HELBURUA → JARDUERA → JARRAIPENA</strong>';
+  TR.eu.title.center=['Nire zentroa','Datuak, neurriak, ordutegia, irakasleak eta lehentasunak.'];
+  TR.eu.title.acts=['Jarduerak','Sortu jarduera edo erabili bankuko eredua.'];
+  TR.eu.title.track=['Jarraipena','Jarduera bakoitzaren benetako garapena.'];
+  TR.eu.title.summary=['Laburpena','Transferentzia, orduak eta kontrola.'];
+  TR.eu.modalSub='Jarduera osatu eta datuak prestatu.';
+
+  // Benetako .xlsx txantiloia, Lanaldia zutabean desplegablearekin.
+  const TEACHER_XLSX_B64='UEsDBBQAAAAIAI9NJV0d4UEo3wAAALgBAAAPAAAAeGwvd29ya2Jvb2sueG1stdHLTsMwEAXQX7FmT5w0zaNR3QqJTbf8wTieJFb8iGwX/PmIglrBig270V1cHd05nrM17I1C1N4JqIoSGLnRK+1mAdc0PfVwPh3z8O7DKr1fWbbGxSELWFLaBs7juJDFWPiNXLZm8sFiioUPM49bIFRxIUrW8F1ZttyidvDZd0vj/WIOLQm4BFwxGsIV2C2/KAEVsDBoJeC1a0nVDfbUVLg/tB18a8JfNH6a9EgvfrxacumLE8hg0t7FRW8RGP/teQ6zllr99OzuHln3kqZD1XRlvZcS/8HDH1PxxxdOH1BLAwQUAAAACACPTSVdL7tp1jICAADVFgAADQAAAHhsL3N0eWxlcy54bWzlWEtP4zAQ/iuW79u8KKCKgFhEpL1wgcNe3cRJLY3tyHZLyq9fxUnTANuFLGlK2l4yM7W/+ebVx1zdFBzQiirNpAixN3ExoiKWCRNZiJcm/XGJb66vipk2a6CPC0oNKjgIPStCvDAmnzmOjheUEz2RORUFh1QqToyeSJU5OleUJLq8xsHxXffc4YQJXCKmUhiNYrkUJsRBY7LOXtCKQIg9DyOnNAjCaWW6IwqYkdbubG9snvPq/DuAWIJUSGXzEEf166vQ53+DDqbT24vgc9C1oK0TBtAk46xKBgMonzkxhioRMQBUy0/rnIZYSEEbxPrwh5cyRdaeP+18T0tgScUru9sRsfPqfk/49xfRWfQBfi3YTM6lSqh6k8vKWFXlvVxJxkhee2mb/3mgEa3rmAI8lnPyO238e9Z/kSKx5BE3v5IQuxiVdd+IDKAWK6haqRy1ITcuWuj+5f/CF+nWT3cArwVA8hzWD0s+pyqyo2/fttZIirbGALbaTwtm9c9S8HfFsGcK3qlQsPotsExwum1esjGghVTsRQpTfqTFVBiqNn1apONkv6LKsLhrPLt6csCx8E6FwtA96Y20J8c0Y8+K5E+0qBx2HDj3cMF1pj2mHuutJsMG1xttf5y0h52APbaNfyyBBONspGHH9mjy328gwYH+XvinQqF7Ob9SQe/w6Ts6Cvup4Hftvt5+crrf4VupXmi1dll2t/VmWdbYUblADfFDyRFer6zaqzFt1e2C+voPUEsDBBQAAAAIAI9NJV36XAFZAwMAANoNAAATAAAAeGwvdGhlbWUvdGhlbWUxLnhtbL1X23KbMBT8FUbvDTdz84RkEsduH9Jpp8kPyCBAjRAeSY6dv+8gbgKM4zR27AdLYs/ZReewwte3+5xor4hxXNAQmFcG0BCNihjTNARbkXzzwe3NNZyLDOVIozBHIVhkUHz//Qy0fU4on8MQZEJs5rrOowzlkF8VG0T3OUkKlkPBrwqW6jGDO0zTnOiWYbh6DjEFbd4lQTmigpcLEWFP0QGy8lr8YpY//I0vCNNeIQnBDtO42D2jvQAagVwsCAuBIT9A02+u9TaKiIlgJXAlP01gHRG/WDKQpes20lha/szsGCSCiDFw6ZffLqNEwChCtJajgk3HNXyrASuoangge+CZ9iBAYbDHDIF7b836ARJVDWfjG10FywenHyBR1dAZBdwZ1n1g9wMkqhq6o4DZ8s6zlv0AicoIpi9juOv5vtvAW0xSkB8H8YHrGt5Dg+9gutJqVQIqeo33K0lwhGTf5fBvwVYFFbLKUGCqibcNSmBUNigkeM2w9ojTTEgeOEfwHUDEjwL0AWeO6bsCjlAfIW3pOgZd3Qy5NbmYfCQTTMiTeCPokUtxvCA4XmFC5ERGtaXYZAvCGsIeMGWwG/M6Vcq1TcFDYIDJXNJBMBXVmus1Tz2ck23+s4jrpjdbO4BzDkV3wXAUn2gZ5CzlqoYSd7IOz57Q0dENddgn6pB3crIQ3/ywkOCoEF0pD8FUg+Up4cxqu+URJCguC1Yn6JX1LCUOZlN3ZH12a08oMc9gjJq8xpSSqWbruvAMRVakeP5hJUEwIaTcqksUWR/bAaH9mbYr+b3m7v7LLDaMiwfIswonL7XnK1VoAsP5Ahqr3JnL0ejDPURJgiIxsdJNH7mosxy8/Fl0OSm2ArGnLN5pa7Jlf2AcAsczHQNoMeaiKYAWY9a1z/j9oluHZJPB2sl7D22Fl+OWUxEr5Qyl9+e14nW6Ostx9X7UwLWm7NabfhIvcD4Gyrmk+Efgf9RTK6s897Gp6lDlTRqtPSHPvpDRdl35dYY6bNnSY5vXMTkb/IFqVm7+AVBLAwQUAAAACACPTSVdDR656GUAAABzAAAAFAAAAHhsL3NoYXJlZFN0cmluZ3MueG1sBcFRCsMgDADQq0j+Z9w+xpDankXatAomFpMNj7/3lm1ycz8aWrskePoAjmTvR5UrwdfOxwe2dZlR1dzkJhpngmJ2R0TdC3FW32+Sye3sg7Op7+NCvQflQwuRccNXCG/kXAUcrn9QSwMEFAAAAAgAj00lXe7vj/qpBgAAwjsAABgAAAB4bC93b3Jrc2hlZXRzL3NoZWV0MS54bWyd21FP2wYUhuG/Yvm6I7EdOwlqqLZzNnXSKk272K49YiAiiVlsCtuvnxwonPScvKS9KumDw2ekvoXEfv/hcbNOPje7btVuF2l2Nk6TZnvZLlfb60V631/9MEs/XLx/PH9od7fdTdP0yeNmve3OHxfpTd/fnY9G3eVNs6m7s/au2T5u1lftblP33Vm7ux51d7umXu4P26xH+XhcjTb1apsOT7j/21/2n/z7Llk2V/X9uv+jffjYrK5v+kWalWkyGj7xsl13z38mm9UwMk029eP+z4fVsr9ZpPkkTW5Wy2WzXaTjNLm87/p289eTZa9P83R4/nx4/np4/g2HF8+HF6+Hz77h8Mnz4ZOXw7M3x49evwn775rWfT082LUPyW74pP1XGD78MUuTbpFm4zTpF2nX7/b0+eLXXX1bd+umHp7r89Mzvhz007GDbuvuul6Fx8iRYz6ttn1zHR+jR475rd7W6+VXx4z2p2fOMjdnmT89UXnkLJMsPM0jR/18393Wu/gsjxzycfXf7f22/6++Dc/zyFEZn2BhTrB44wTz8ASPHPWp7ptN3a9u43P8rqO0+K5znJhznHz9DM//UvanQiiEGqIbUpohJQ0hFEItTxpSmSEVDSEUQq1OGjI1Q6Y0hFAIdXrSkJkZMqMhhEKos5OGzM2QOQ0hFEKdnzQkG9vCj2kKqqBqrH7Nwf83Ga4hFVSN1a+x/y9kOa4hFVSN1a+xEc8KXEMqqBqrX2NzO/yYAWswuKgaq19jmzt8MqzB6qJqrH6NDW+G5UUVVI3Vr7H1zTC/qIKqsfo1NsEZNhhVUDVWv8Z2OMMQowqqxup/DLUtzrHFqIKqsfo1tsU5thhVUDVWv+bgZ3RsMaqgaqx+jW1xji1GFVSN1a+xLR5+X4U12GJUjdWvsS3OscWogqqx+jW2xTm2GFVQNVa/xrY4xxajCqrG6tfYFg+vNMAabDGqxurX2Bbn2GJUQdVY/W/MtsUFthhVUDVWv8a2uMAWowqqxurX2BYX2GJUQdVY/ZqDFzewxaiCqrH6NbbFBbYYVVA1Vr/GtrjAFqMKqsbq19gWF9hiVEHVWP0a2+ICW4wqqBqrX2NbXGCLUQVVY/VrbIsLbDGqoGqs/pU92+IJthhVUDVWv8a2eIItRhVUjdWvsS2eYItRBVVj9WtsiyfYYlRB1Vj9moOXhPk1YX5RmF8VPq3FE9viCbYYVVA1Vr/GtniCLUYVVI3Vr7EtnmCLUQVVY/VrbIsn2GJUQdVY/Rrb4gm2GFVQNVb/5oZtcYktRhVUjdWvsS0uscWogqqx+jW2xSW2GFVQNVa/xra4xBajCqrG6tfYFpfYYlRB1Vj9moP36PhNOn6Xjt+mO63FpW1xiS1GFVSN1a+xLS6xxaiCqrH6NbbFJbYYVVA1Vr/GtrjEFqMKqsbq39+1La6wxaiCqrH6NbbFFbYYVVA1Vr/GtrjCFqMKqsbq19gWV9hiVEHVWP0a2+IKW4wqqBqrX2NbXGGLUQVVY/VrDi6a4Ksm+LIJvm7itBZXtsUVthhVUDVWv8a2uMIWowqqxurX2BZX2GJUQdVY/SUutsVTbDGqoGqsfo1t8RRbjCqoGqtfY1s8xRajCqrG6tfYFk+xxaiCqrH6NbbFU2wxqqBqrH6NbfEUW4wqqBqrX2NbPMUWowqqxurXHFzFxpex8XVsfCHbaS2e2hZPscWogqqx+jW2xVNsMaqgaqz+Kj/b4hm2GFVQNVa/xrZ4hi1GFVSN1a+xLZ5hi1EFVWP1a2yLZ9hiVEHVWP0a2+IZthhVUDVWv8a2eIYtRhVUjdWvsS2eYYtRBVVj9Wtsi2fYYlRB1Vj9moPLivm6Yr6wmK8sPq3FM9viGbYYVVA1Vn+hs23xHFuMKqgaq19jWzzHFqMKqsbq19gWz7HFqIKqsfo1tsVzbDGqoGqsfo1t8RxbjCqoGqtfY1s8xxajCqrG6tfYFs+xxaiCqrH6NbbFc2wxqqBqrH6NbfEcW4wqqBqrX3Nwnwff6MF3evCtHqfe63F4s8cbd3u8cbvHG/d7nHjDx/jgjo/xczirI5OIhVmP8JdJo69ugFzWff1nvV4t637Vbrvksr3fDreO7uceYtL/e9cs0vWq69Ok+2fXXA3XGZ7vv+Lw2cNtq/frOrtIs1HxLhvl7/JR8a4cVe+ydPi6Lz48OHzq4K/292re1dfNp3p3vdp2ybq56hfp+GyaJrun+1v3H/ft3f6jMk3+bvu+3Xx5dNPUy2Y3PCrS5Kpt+5cHT9+Ol9txL/4HUEsDBBQAAAAIAI9NJV1oz62p9AEAACQFAAAYAAAAeGwvd29ya3NoZWV0cy9zaGVldDIueG1shZTLbtswEEV/ZcBtY+thWymMyEH6Qgo0RdEuuh5bI4kQHwJJ2YJ/rPt+WSHKcRRHqlecEefeewSQvLtvpYA9Gcu1Slk0DxmQ2umMqyJljctn79n95q5dH7SpbEnkoJVC2XWbstK5eh0EdleSRDvXNalWilwbic7OtSkCWxvCzMukCOIwTAKJXLHO0H/94od/GMgox0a4n/rwSLwoXcqiFYOgG9xpYU8rSN5BMpDY+vXAM1emLF4yKHmWkUpZyGDXWKfl734verHp5fFJHp/lSXhNHrxgeO5P6LBrjD6A6YZ8Qlc+RAxsyuKEgUuZdcZv7TePdOTv4O8f+GqwQitodiRjSGXYme/7iLPLhzcuJwqjD4PceJAb94rbi9zPhmQznjGh+K4FwpYcvRK9yV4MshfeKYounJ5/dTx+SnQkNcMtP5LCav5/huWAYTlhV6EtkI8jLK9wG1LAewNQWDSW4xWi1YBoNe7+xJWjYoJoQvMLuUCgTHdH2KuvcCQDjmTc8xsqFNkEx4TmoanIoGsgI1sLKnAryPFqDVGwuIEoiG8g7qpVkHjaaBwzuLhGkkxBH0n0N+zcgaG8u1Hr7jr05//1ZI0FPaEpuLIgKHcpC+e3DEz/gvja6dpXKwZb7ZyWz11JmJHpugWDXGt3bvqk84O3+QdQSwMEFAAAAAAAj00lXaqH4HQoAQAAKAEAAAsAAABfcmVscy8ucmVsc++7vzw/eG1sIHZlcnNpb249IjEuMCIgZW5jb2Rpbmc9InV0Zi04Ij8+PFJlbGF0aW9uc2hpcHMgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm9wZW54bWxmb3JtYXRzLm9yZy9wYWNrYWdlLzIwMDYvcmVsYXRpb25zaGlwcyI+PFJlbGF0aW9uc2hpcCBUeXBlPSJodHRwOi8vc2NoZW1hcy5vcGVueG1sZm9ybWF0cy5vcmcvb2ZmaWNlRG9jdW1lbnQvMjAwNi9yZWxhdGlvbnNoaXBzL29mZmljZURvY3VtZW50IiBUYXJnZXQ9Ii94bC93b3JrYm9vay54bWwiIElkPSJSYTEzN2JmODdkOWE0NDM0NSIgLz48L1JlbGF0aW9uc2hpcHM+UEsDBBQAAAAIAI9NJV1zO/ZfIwEAAJEDAAAaAAAAeGwvX3JlbHMvd29ya2Jvb2sueG1sLnJlbHO10z1ugzAcBfCrWN6LDQYDVUiWLl3TXMCYvwHFH8h2WnK2Dj1Sr1A1rSqoOnRh8fAsPf38JL+/vu0Os9HoGXwYnW1wmlCMwErXjbZv8CWquwof9rsjaBFHZ8MwTgHNRtvQ4CHG6Z6QIAcwIiRuAjsbrZw3IobE+Z5MQp5FDySjlBO/7MDrTnS6TvCfRqfUKOHByYsBG/8oJiFeNQSMTsL3EBtMZv2dJbPRGD12DT5KyqDKaF5kKst5W2NENgPFAQysPbfo60wXKqgZp4xBzSueA5RbqsIgPHRP0Y+2/73W8mrBSxmlqVR5JnmZ805tyXtx/hwGgLim/cSfDwCIy/VKDh0rRAVFKvKab7reP3nZgteyqgVVp0VJWd624sYjq4+1/wBQSwMEFAAAAAgAj00lXaE7z04bAQAA3AMAABMAAABbQ29udGVudF9UeXBlc10ueG1stZNBTsMwEEWvEnmLYrddIISSdgFsAQkuYDmTxKo9tjyTkp6NBUfiCqguqgAhRVXbjWczfu//xXy+f1Sr0btiA4lswFrM5UwUgCY0FrtaDNyWN2K1rF63EagYvUOqRc8cb5Ui04PXJEMEHL1rQ/KaSYbUqajNWnegFrPZtTIBGZBL3jHEsrqHVg+Oi4eRAffa0TtR3O33dqpa6BidNZptQLXB5o+kDG1rDTTBDB6QJcUEuqEegL2TeUqvLV5lsPrXmcDRcdLvVjKByzvU20gHxdMGUrINFM868aP2UAs1OkW8dUDyzA0zdErNPXjYv/OTA2TMZNleJ2heOFnszt75J3sqyFtI6/yRVB6n9/8d5sA/Nsji4kFUvtXlF1BLAQIUAxQAAAAIAI9NJV0d4UEo3wAAALgBAAAPAAAAAAAAAAAAAACkgQAAAAB4bC93b3JrYm9vay54bWxQSwECFAMUAAAACACPTSVdL7tp1jICAADVFgAADQAAAAAAAAAAAAAApIEMAQAAeGwvc3R5bGVzLnhtbFBLAQIUAxQAAAAIAI9NJV36XAFZAwMAANoNAAATAAAAAAAAAAAAAACkgWkDAAB4bC90aGVtZS90aGVtZTEueG1sUEsBAhQDFAAAAAgAj00lXQ0euehlAAAAcwAAABQAAAAAAAAAAAAAAKSBnQYAAHhsL3NoYXJlZFN0cmluZ3MueG1sUEsBAhQDFAAAAAgAj00lXe7vj/qpBgAAwjsAABgAAAAAAAAAAAAAAKSBNAcAAHhsL3dvcmtzaGVldHMvc2hlZXQxLnhtbFBLAQIUAxQAAAAIAI9NJV1oz62p9AEAACQFAAAYAAAAAAAAAAAAAACkgRMOAAB4bC93b3Jrc2hlZXRzL3NoZWV0Mi54bWxQSwECFAMUAAAAAACPTSVdqofgdCgBAAAoAQAACwAAAAAAAAAAAAAApIE9EAAAX3JlbHMvLnJlbHNQSwECFAMUAAAACACPTSVdczv2XyMBAACRAwAAGgAAAAAAAAAAAAAApIGOEQAAeGwvX3JlbHMvd29ya2Jvb2sueG1sLnJlbHNQSwECFAMUAAAACACPTSVdoTvPThsBAADcAwAAEwAAAAAAAAAAAAAApIHpEgAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLBQYAAAAACQAJAEkCAAA1FAAAAAA=';
+  downloadTeacherTemplate=function(){
+    const raw=atob(TEACHER_XLSX_B64),arr=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)arr[i]=raw.charCodeAt(i);
+    const blob=new Blob([arr],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}),a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);a.download='HeziPlus_irakasle_txantiloia.xlsx';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),800);
+  };window.downloadTeacherTemplate=downloadTeacherTemplate;
+
+  function officialObject(a,t){
+    ensureIndicators(a);
+    const gs=(a.objectives||[]).map(i=>goals()[i]).filter(Boolean);
+    return {
+      'Jardueraren izena / Nombre de la actividad':a.name||'',
+      'Jardueraren deskribapen laburra / Breve descripción de la actividad':a.desc||'',
+      'Jardueraren arduradun profesionala / Profesional responsable':a.teacher||'',
+      'Hiruhilekoan planifikatutako orduak / N.º horas planificadas en el trimestre':String(termHours(a,t)||''),
+      'Tipologia / Tipología':a.measure||'',
+      'Azpitipologia / Subtipología':a.sub||'',
+      'Hezi+ helburu hautatuak / Objetivos Hezi+ seleccionados':gs.map(x=>'• '+x).join('\n'),
+      'DBH 1eko ikasle/talde kopurua / Cómputo 1.º ESO':String(a.groups?.[0]||0),
+      'DBH 2ko ikasle/talde kopurua / Cómputo 2.º ESO':String(a.groups?.[1]||0),
+      'DBH 3ko ikasle/talde kopurua / Cómputo 3.º ESO':String(a.groups?.[2]||0),
+      'DBH 4ko ikasle/talde kopurua / Cómputo 4.º ESO':String(a.groups?.[3]||0)
+    };
+  }
+  officialText=function(a){return officialObject(a,String(a._officialTerm||'1'));};window.officialText=officialText;
+
+  function capture(){
+    const val=id=>document.getElementById(id)?.value;
+    let v;
+    if((v=val('wPriority'))!==undefined)D.priority=v;
+    if((v=val('wMeasure'))!==undefined)D.measure=v;
+    if((v=val('wTerm'))!==undefined)D.term=v;
+    if((v=val('wEco'))!==undefined)D.ecosystem=v; else if(D.measure!=='He-Hobetuz')D.ecosystem='';
+    if((v=val('wNeed'))!==undefined)D.need=v;
+    if((v=val('wChange'))!==undefined)D.change=v;
+    if((v=val('wName'))!==undefined)D.name=v;
+    if((v=val('wSub'))!==undefined)D.sub=v;
+    if((v=val('wDesc'))!==undefined)D.desc=v;
+    if((v=val('wTeacher'))!==undefined)D.teacher=v;
+    if((v=val('wLevel'))!==undefined)D.level=v;
+    if((v=val('wHours'))!==undefined)D.hours=num(v);
+    if((v=val('wStudents'))!==undefined)D.students=num(v);
+    if((v=val('wSlot'))!==undefined)D.slot=v;
+    if((v=val('wSlot2'))!==undefined)D.slot2=v;
+    D.groups=D.groups||[0,0,0,0];for(let i=0;i<4;i++){v=val('wG'+i);if(v!==undefined)D.groups[i]=num(v);}
+    D.termHours=D.termHours||{};for(let t=1;t<=3;t++){v=val('wH'+t);if(v!==undefined)D.termHours[t]=num(v);}
+    document.querySelectorAll('textarea[data-v41-ind]').forEach(el=>{D._goalIndicators=D._goalIndicators||{};D._goalIndicators[el.dataset.v41Ind]=el.value;});
+    const boxes=[...document.querySelectorAll('[data-v41-goal]')];if(boxes.length)D.objectives=boxes.filter(x=>x.checked).map(x=>+x.dataset.v41Goal);
+    if((v=val('wOfficialTerm'))!==undefined)D._officialTerm=v;
+    ensureIndicators(D);
+  }
+  window.v41Capture=capture;
+  window.v41GoalChanged=function(){capture();ensureIndicators(D);drawW();};
+  suggestIndicators=function(){capture();ensureIndicators(D,true);drawW();};window.suggestIndicators=suggestIndicators;
+
+  body=function(s){
+    ensureIndicators(D);
+    if(s===0)return `<div class="form2"><div><label>Lehentasuna</label><select id="wPriority">${priorityOptions(D.priority)}</select></div><div><label>Neurria</label><select id="wMeasure" onchange="v41Capture();D.measure=this.value;drawW()">${measureOptions(D.measure)}</select></div><div><label>Garapen-epea</label><select id="wTerm">${['all','1','2','3'].map(x=>`<option value="${x}" ${String(D.term)===x?'selected':''}>${termLabel(x)}</option>`).join('')}</select></div>${D.measure==='He-Hobetuz'?`<div><label>Ekosistema</label><select id="wEco"><option value="">— Aukeratu —</option>${ecos().map(e=>`<option ${D.ecosystem===e?'selected':''}>${esc(e)}</option>`).join('')}</select></div>`:''}<div class="full"><label>Identifikatutako beharra</label><textarea id="wNeed">${esc(D.need)}</textarea></div><div class="full"><label>Espero den aldaketa</label><textarea id="wChange">${esc(D.change)}</textarea></div></div>`;
+    if(s===1)return `<div class="form2"><div><label>Jardueraren izena</label><input id="wName" value="${esc(D.name)}"></div><div><label>Azpitipologia</label><input id="wSub" value="${esc(D.sub||'')}"></div><div class="full"><label>Jardueraren deskribapen laburra</label><textarea id="wDesc">${esc(D.desc||'')}</textarea></div><div><label>Arduradun profesionala</label><select id="wTeacher">${teacherOptions(D.teacher)}</select></div><div><label>Maila / hartzaileak</label><input id="wLevel" value="${esc(D.level||'')}"></div><div><label>Asteko orduak</label><input id="wHours" type="number" min="0" step="0.25" value="${num(D.hours)}"></div><div><label>Ikasle kopurua</label><input id="wStudents" type="number" min="0" value="${num(D.students)}"></div><div><label>Ordu-tartea 1</label><select id="wSlot">${(S.slots||[]).map(x=>`<option value="${x.id}" ${D.slot===x.id?'selected':''}>${slotName(x.id)}</option>`).join('')}</select></div><div><label>Ordu-tartea 2</label><select id="wSlot2"><option value="">—</option>${(S.slots||[]).map(x=>`<option value="${x.id}" ${D.slot2===x.id?'selected':''}>${slotName(x.id)}</option>`).join('')}</select></div><div class="full"><div class="officialDataBox"><b>Aplikazio ofizialerako ikasle/talde konputua</b><div class="form4">${[0,1,2,3].map(i=>`<div><label>DBH ${i+1}</label><input id="wG${i}" type="number" min="0" value="${num(D.groups?.[i])}"></div>`).join('')}</div></div></div><div class="full"><div class="officialDataBox"><b>Hiruhilekoan planifikatutako orduak</b><div class="form3">${[1,2,3].map(t=>`<div><label>${t}. hiruhilekoa</label><input id="wH${t}" type="number" min="0" step="0.5" value="${termHours(D,t)}"></div>`).join('')}</div></div></div></div>`;
+    if(s===2){const gs=goals();return `<div class="v41-goals">${gs.map((g,i)=>{const on=D.objectives?.includes(i);return `<div class="v41-goal"><div class="goalName"><label style="margin:0"><input type="checkbox" data-v41-goal="${i}" ${on?'checked':''} onchange="v41GoalChanged()" style="width:auto;margin-right:7px"><b>${i+1}.</b> ${esc(g)}</label></div><div>${on?`<label style="margin-top:0">Lorpen-adierazlea</label><textarea data-v41-ind="${i}">${esc(D._goalIndicators?.[i]||indicatorTemplate(i,D))}</textarea>`:'<span class="small">Helburua hautatzean adierazlea sortuko da.</span>'}</div></div>`}).join('')}</div><div class="row" style="margin-top:12px;justify-content:flex-end"><button class="secondary" onclick="suggestIndicators()">Adierazleak helburuekin berreraiki</button></div>`;}
+    if(s===3){const okGoals=(D.objectives||[]).length>0,okIndicators=okGoals&&(D.objectives||[]).every(g=>String(D._goalIndicators?.[g]||'').trim());const c=[['Beharra',D.need],['Neurria',D.measure],['Hiruhilekoa / epea',D.term],['He-Hobetuz ekosistema',D.measure!=='He-Hobetuz'||D.ecosystem],['Jarduera',D.desc],['Helburuak',okGoals],['Helburu bakoitzeko lorpen-adierazlea',okIndicators]];return `<div class="coh">${c.map(x=>`<div><span>${x[0]}</span><b style="color:${x[1]?'var(--ok)':'var(--r)'}">${x[1]?'✓':'!'}</b></div>`).join('')}</div>`;}
+    if(s===4){const t=String(D._officialTerm||'1');return `<div class="form2" style="margin-bottom:10px"><div><label>Kopiatzeko hiruhilekoa</label><select id="wOfficialTerm" onchange="D._officialTerm=this.value;drawW()">${[1,2,3].map(x=>`<option value="${x}" ${t===String(x)?'selected':''}>${x}. hiruhilekoa</option>`).join('')}</select></div></div>`+Object.entries(officialObject(D,t)).map(([k,v],i)=>`<label>${esc(k)}</label><div class="copy" id="cpv41_${i}">${esc(v)}<button class="secondary" onclick="copyText('cpv41_${i}')">Kopiatu</button></div>`).join('');}
+    return '';
+  };window.body=body;
+
+  drawW=function(){
+    steps.innerHTML=TR.eu.steps.map((n,i)=>`<span class="step ${i===step?'active':''}">${n}</span>`).join('');
+    modalTitle.textContent='Jarduera';modalSub.textContent='';prev.textContent='← Aurrekoa';draftBtn.textContent=step>=3?'Jarduera gorde':'Zirriborroa gorde';prev.style.visibility=step?'visible':'hidden';next.textContent=step===4?'Jarduera gorde eta itxi':'Hurrengoa →';content.innerHTML=body(step);
+    draftBtn.onclick=()=>saveDraft(step>=3);next.onclick=nextS;prev.onclick=prevS;
+  };window.drawW=drawW;
+  saveDraft=function(closeAfter=false){capture();if(!D.name||!D.name.trim())D.name='Jarduera berria';const i=(S.activities||[]).findIndex(a=>a.id===D.id);const c=JSON.parse(JSON.stringify(D));if(i>=0)S.activities[i]=c;else S.activities.push(c);saveSoft();render();if(closeAfter)closeW();};window.saveDraft=saveDraft;
+  nextS=function(){capture();if(step<4){step++;drawW()}else saveDraft(true)};prevS=function(){capture();if(step){step--;drawW()}};window.nextS=nextS;window.prevS=prevS;
+
+  function checklistV41(){
+    const base=(typeof checklist==='function'?checklist():[]).filter(r=>!/adierazle|helburu/i.test(String(r.t||'')));
+    base.push({t:'Jarduera guztiek Hezi+ helburu bat gutxienez hautatuta',ok:(S.activities||[]).every(a=>(a.objectives||[]).length>0)});
+    base.push({t:'Hautatutako helburu bakoitzak lorpen-adierazle neurgarri bat du',ok:(S.activities||[]).every(a=>{ensureIndicators(a);return (a.objectives||[]).length>0&&(a.objectives||[]).every(g=>String(a._goalIndicators?.[g]||'').trim().length>0)})});
+    return base;
+  }
+  // recursion saihesteko: une honetako checklist-a gorde.
+  const checklistBeforeV41=checklist;
+  function checklistSafe(){
+    const base=(checklistBeforeV41?checklistBeforeV41():[]).filter(r=>!/adierazle|helburu/i.test(String(r.t||'')));
+    base.push({t:'Jarduera guztiek Hezi+ helburu bat gutxienez hautatuta',ok:(S.activities||[]).every(a=>(a.objectives||[]).length>0)});
+    base.push({t:'Hautatutako helburu bakoitzak lorpen-adierazle neurgarri bat du',ok:(S.activities||[]).every(a=>{ensureIndicators(a);return (a.objectives||[]).length>0&&(a.objectives||[]).every(g=>String(a._goalIndicators?.[g]||'').trim().length>0)})});
+    return base;
+  }
+  checklist=checklistSafe;window.checklist=checklist;
+
+  window.v41SetTerm=function(kind,val){S[kind]=val;saveSoft();render();};
+  function termBar(kind){const v=S[kind]||'all';return `<div class="termTools">${[['all','Ikasturte osoa'],['1','1. hiruhilekoa'],['2','2. hiruhilekoa'],['3','3. hiruhilekoa']].map(x=>`<button class="termBtn ${v===x[0]?'active':''}" onclick="v41SetTerm('${kind}','${x[0]}')">${x[1]}</button>`).join('')}</div>`;}
+  window.v41Follow=function(id,key,val){const a=S.activities.find(x=>x.id===id);if(!a)return;a.followup=a.followup||{};a.followup[key]=(key==='executionPct'||key==='attendancePct')?num(val):val;if(key==='attendancePct')a.att=num(val);saveSoft();};
+  renderTrack=function(){
+    trackH2.textContent='Jarraipena';trackP.textContent='Gauzatzea, asistentzia, ebidentzia eta doikuntza.';const t=S.trackTerm||'all',acts=actsTerm(t);
+    tgrid.innerHTML=`${termBar('trackTerm')}<div class="grid g2">${acts.map(a=>{ensureIndicators(a);const f=a.followup||{};const inds=(a.objectives||[]).map(g=>a._goalIndicators?.[g]).filter(Boolean);return `<details class="ac activity ${typeCls(a.measure)}"><summary><div class="row between"><div><span class="small">${esc(a.measure)}${a.ecosystem?' · '+esc(a.ecosystem):''}</span><h3>${esc(a.name)}</h3></div><span class="pill ${num(f.executionPct)>=80?'ok':num(f.executionPct)>0?'warn':''}">${num(f.executionPct)>0?num(f.executionPct)+'% gauzatuta':'Jarraipenik gabe'}</span></div></summary><div class="inside"><div class="form3"><div><label>Gauzatzea (%)</label><input type="number" min="0" max="100" value="${num(f.executionPct)}" onchange="v41Follow('${a.id}','executionPct',this.value)"></div><div><label>Asistentzia (%)</label><input type="number" min="0" max="100" value="${num(f.attendancePct)||num(a.att)}" onchange="v41Follow('${a.id}','attendancePct',this.value)"></div><div><label>Balorazioa</label><select onchange="v41Follow('${a.id}','valuation',this.value)"><option value="">—</option>${['Mantendu','Doitu','Zabaldu','Gelditu'].map(x=>`<option ${f.valuation===x?'selected':''}>${x}</option>`).join('')}</select></div><div class="full"><label>Ebidentzia / emaitza</label><textarea onchange="v41Follow('${a.id}','evidence',this.value)">${esc(f.evidence||'')}</textarea></div><div class="full"><label>Oharrak</label><textarea onchange="v41Follow('${a.id}','notes',this.value)">${esc(f.notes||'')}</textarea></div><div class="full"><label>Hurrengo doikuntza</label><textarea onchange="v41Follow('${a.id}','adjustment',this.value)">${esc(f.adjustment||'')}</textarea></div></div><div class="v41-indicators"><b>Helburuei lotutako lorpen-adierazleak</b><ol>${inds.map(x=>`<li>${esc(x)}</li>`).join('')||'<li>—</li>'}</ol></div></div></details>`}).join('')||'<div class="card">Ez dago jarduerarik.</div>'}</div>`;
+  };window.renderTrack=renderTrack;
+
+  // Jardueren bankua.
+  function ensureBankModal(){if(document.getElementById('v41BankModal'))return;document.body.insertAdjacentHTML('beforeend',`<div id="v41BankModal" class="modal"><div class="box"><div class="mhead"><div><b>Jardueren bankua</b><div class="small">Aukeratu eredua eta moldatu zure zentrora.</div></div><button class="secondary" onclick="v41CloseBank()">✕</button></div><div class="mbody"><div class="v41-bank-tools"><input id="v41BankSearch" placeholder="Bilatu jarduera..." oninput="v41RenderBank()"><select id="v41BankMeasure" onchange="v41RenderBank()"><option value="">Neurri guztiak</option>${[...new Set(V41_LIBRARY.map(a=>a.measure).filter(Boolean))].map(x=>`<option>${esc(x)}</option>`).join('')}</select><select id="v41BankEco" onchange="v41RenderBank()"><option value="">Ekosistema guztiak</option>${[...new Set(V41_LIBRARY.map(a=>a.ecosystem).filter(Boolean))].map(x=>`<option>${esc(x)}</option>`).join('')}</select></div><div id="v41BankList" class="v41-bank-grid"></div></div></div></div>`);}
+  window.v41OpenBank=function(){ensureBankModal();document.getElementById('v41BankModal').classList.add('open');v41RenderBank();};window.v41CloseBank=function(){document.getElementById('v41BankModal')?.classList.remove('open');};
+  window.v41RenderBank=function(){const q=String(document.getElementById('v41BankSearch')?.value||'').toLowerCase(),m=document.getElementById('v41BankMeasure')?.value||'',e=document.getElementById('v41BankEco')?.value||'';const list=V41_LIBRARY.map((a,i)=>({a,i})).filter(x=>(!m||x.a.measure===m)&&(!e||x.a.ecosystem===e)&&(!q||[x.a.name,x.a.desc,x.a.measure,x.a.ecosystem].join(' ').toLowerCase().includes(q)));document.getElementById('v41BankList').innerHTML=list.map(x=>`<div class="v41-bank-card"><span class="pill">${esc(x.a.measure||'')}</span>${x.a.ecosystem?`<span class="pill teal">${esc(x.a.ecosystem)}</span>`:''}<h3>${esc(x.a.name)}</h3><p>${esc(x.a.desc||'')}</p><button class="primary" onclick="v41UseTemplate(${x.i})">Erabili eta moldatu</button></div>`).join('')||'<div class="card">Ez da emaitzarik aurkitu.</div>';};
+  window.v41UseTemplate=function(i){const a=JSON.parse(JSON.stringify(V41_LIBRARY[i]));a.id=uid();a.name=baseName(a.name);a.teacher='';a.priority=S.priorities?.[0]?.id||a.priority||'';a.done=0;a.att=0;a.followup={executionPct:0,attendancePct:0,valuation:'',evidence:'',notes:'',adjustment:''};a.termHours={1:activeInTerm(a,1)?num(a.hours)*10:0,2:activeInTerm(a,2)?num(a.hours)*10:0,3:activeInTerm(a,3)?num(a.hours)*10:0};a._goalIndicators={};ensureIndicators(a,true);D=a;step=0;v41CloseBank();modal.classList.add('open');drawW();};
+
+  const renderActsBeforeV41=renderActs;
+  renderActs=function(){renderActsBeforeV41();actsP.textContent='Sortu jarduera edo erabili bankuko eredua.';document.getElementById('indicatorGuide')?.remove();const row=newActBtn2?.parentElement;if(row&&!document.getElementById('v41BankBtn')){const b=document.createElement('button');b.id='v41BankBtn';b.className='secondary';b.textContent='Jardueren bankua';b.onclick=v41OpenBank;row.insertBefore(b,newActBtn2);}};window.renderActs=renderActs;
+
+  const renderSummaryBeforeV41=renderSummary;
+  renderSummary=function(){
+    renderSummaryBeforeV41();summaryP.textContent='Transferentzia, jarduerak, irakasleen orduak eta kontrola.';
+    const t=S.summaryTerm||'all';
+    if(S.summaryMode==='official'){
+      let html=termBar('summaryTerm');if(t==='all')html+='<div class="callout">Aukeratu hiruhilekoa aplikazio ofizialerako datuak kopiatzeko.</div>';else html+=actsTerm(t).map((a,i)=>`<details class="ac" ${i===0?'open':''}><summary><b>${esc(a.name)}</b> <span class="pill">${esc(a.measure)}</span></summary><div class="inside">${Object.entries(officialObject(a,t)).map(([k,v],j)=>`<label>${esc(k)}</label><div class="copy" id="cpv41s_${a.id}_${j}">${esc(v)}<button class="secondary" onclick="copyText('cpv41s_${a.id}_${j}')">Kopiatu</button></div>`).join('')}</div></details>`).join('');summaryContent.innerHTML=html;
+    }else if(S.summaryMode==='checklist') summaryContent.innerHTML=`<div class="checkGrid">${checklistSafe().map(x=>`<div class="checkItem ${x.ok?'done':'todo'}"><span>${x.ok?'✓':'!'}</span><div>${esc(x.t)}</div></div>`).join('')}</div>`;
+  };window.renderSummary=renderSummary;
+
+  renderHelp=function(){helpContent.innerHTML=`<div class="card"><h2 style="color:var(--n);margin-top:0">Erabilera</h2><div class="guideSteps"><div><b>1 · Nire zentroa</b><br>Datuak, neurriak, ordu-tarteak, irakasleak eta lehentasunak.</div><div><b>2 · Jarduerak</b><br>Sortu jarduera edo hartu jardueren bankuko eredua eta moldatu.</div><div><b>3 · Helburuak</b><br>Hautatu jarduerari dagozkion Hezi+ helburuak.</div><div><b>4 · Lorpen-adierazleak</b><br>Helburu hautatu bakoitzak jarduerari berari lotutako adierazle neurgarri bat du.</div><div><b>5 · Jarraipena</b><br>Gauzatzea, asistentzia, ebidentziak, balorazioa eta doikuntza.</div><div><b>6 · Ofizialera</b><br>Kopiatu aplikazio ofizialak eskatzen dituen datuak, helburuak barne.</div></div></div>`;};window.renderHelp=renderHelp;
+
+  const renderBeforeV41=render;
+  render=function(){renderBeforeV41();const cc=document.getElementById('centerCall');if(cc)cc.style.display='none';const tt=document.getElementById('teacherTplBtn');if(tt)tt.textContent='Excel txantiloia';const logic=document.getElementById('logic');if(logic)logic.innerHTML=TR.eu.logic;};window.render=render;
+
+  saveSoft();render();
+})();
+
+</script>
 </body></html>
